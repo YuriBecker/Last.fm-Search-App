@@ -2,12 +2,15 @@ import { takeLatest, put, call } from 'redux-saga/effects';
 import { Types as authTypes } from '../../Ducks/auth';
 import { login } from '../../../services/Firebase';
 import showErrorNotification from '../../../utils/functions/showErrorNotification';
+import showSuccessNotification from '../../../utils/functions/showSuccessNotification';
 
 function* actionWatcher(action) {
   try {
     const { email, password } = action.payload;
 
     const user = yield call(login, email, password);
+
+    showSuccessNotification('Login successful!');
 
     yield put({
       type: authTypes.LOGIN_SUCCESS,
