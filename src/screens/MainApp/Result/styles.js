@@ -30,9 +30,6 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     flexDirection: 'row',
   },
-  tag: {
-    margin: theme.spacing(1),
-  },
   artistInfoContainer: {
     display: 'flex',
     justifyContent: 'center',

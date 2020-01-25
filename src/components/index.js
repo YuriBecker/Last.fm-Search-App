@@ -12,3 +12,6 @@ export { default as RadioButton } from './RadioButton/RadioButton';
 export { default as LogoutButton } from './LogoutButton/LogoutButton';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Tag } from './Tag/Tag';
+export { default as TagList } from './TagList/TagList';
+export { default as SimilarArtistsList } from './SimilarArtistsList/SimilarArtistsList';
+export { default as FooterInfoArtist } from './FooterInfoArtist/FooterInfoArtist';
