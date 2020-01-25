@@ -26,7 +26,9 @@
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
     "import/prefer-default-export": 0,
-    "semi": "error"
+    "semi": "error",
+    "react/jsx-props-no-spreading": ["off"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "globals": {
     "window": true,
