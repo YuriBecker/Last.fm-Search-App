@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Container, FormControlLabel, RadioGroup } from '@material-ui/core';
 import { Redirect } from 'react-router';
-import { Chip } from 'material-ui';
+// import { Chip } from 'material-ui';
 import { useDispatch } from 'react-redux';
 import useStyles from './styles';
 import {
@@ -25,17 +25,17 @@ const MainApp = () => {
   const [searchType, setSearchType] = useState('artist');
   const [searchQuery, setSearchQuery] = useState('');
   const [redirect, setRedirect] = useState(false);
-  const [historySearch, setHistorySearch] = React.useState([
-    { key: 0, label: 'Angular' },
-    { key: 1, label: 'jQuery' },
-    { key: 2, label: 'Polymer' },
-    { key: 3, label: 'React' },
-    { key: 4, label: 'Vue.js' },
-  ]);
+  // const [historySearch, setHistorySearch] = React.useState([
+  //   { key: 0, label: 'Angular' },
+  //   { key: 1, label: 'jQuery' },
+  //   { key: 2, label: 'Polymer' },
+  //   { key: 3, label: 'React' },
+  //   { key: 4, label: 'Vue.js' },
+  // ]);
 
-  const handleDelete = chipToDelete => () => {
-    setHistorySearch(chips => chips.filter(chip => chip.key !== chipToDelete.key));
-  };
+  // const handleDelete = chipToDelete => () => {
+  //   setHistorySearch(chips => chips.filter(chip => chip.key !== chipToDelete.key));
+  // };
 
   const handleSearch = () => {
     if (!validateInputSearch(searchQuery)) {
@@ -49,8 +49,8 @@ const MainApp = () => {
   };
 
   if (redirect) {
-    if (searchType === 'artist') return <Redirect push to={`/artist?name=${searchQuery}`} />;
-    if (searchType === 'album') return <Redirect push to={`/album?name=${searchQuery}`} />;
+    if (searchType === 'artist') return <Redirect push to="/artist" />;
+    if (searchType === 'album') return <Redirect push to="/album" />;
   }
 
   return (
