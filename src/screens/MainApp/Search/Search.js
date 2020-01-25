@@ -13,7 +13,7 @@ import {
   RadioButton,
   LogoutButton,
 } from '../../../components';
-import { logout } from '../../../services/Firebase';
+import { actions as authActions } from '../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
 import { actions as searchAlbumActions } from '../../../store/Ducks/searchAlbum';
 import validateInputSearch from '../../../utils/validators/validateInputSearch';
@@ -84,7 +84,7 @@ const MainApp = () => {
           </Container>
         </div>
       </Container>
-      <LogoutButton onClick={() => logout()} />
+      <LogoutButton onClick={() => dispatch(authActions.requestLogout())} />
     </>
 
     // <div className={classes.historyContainer}>

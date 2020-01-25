@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './routes/Router';
+import Root from './routes/Root';
 
-ReactDOM.render(<Router />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));

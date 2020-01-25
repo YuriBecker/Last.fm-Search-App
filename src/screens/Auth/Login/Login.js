@@ -1,9 +1,8 @@
-import React, { useCallback, useContext } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
-import { toast } from 'react-toastify';
 import ReactRouterPropTypes from 'react-router-prop-types';
-import { AuthContext } from '../../../providers/Auth';
 import {
   Button,
   Link,
@@ -13,31 +12,24 @@ import {
   Logo,
 } from '../../../components';
 import useStyles from '../styles';
-import { login } from '../../../services/Firebase';
+import { actions as authActions } from '../../../store/Ducks/auth';
 
 const Login = ({ history }) => {
-  const handleLogin = useCallback(
-    async event => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await login(email.value, password.value);
-        // Redirect to the Main App
-        history.push('/');
-      } catch (error) {
-        const { message } = error;
-        // Show the message error from firebase request
-        toast.error(message);
-      }
-    },
-    [history],
-  );
-
   const classes = useStyles();
+  const dispatch = useDispatch();
 
-  const { currentUser } = useContext(AuthContext);
+  const handleLogin = event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    dispatch(authActions.requestLogin(email.value, password.value));
+  };
+
+  const { isAuthenticated } = useSelector(state => ({
+    isAuthenticated: state.auth.isAuthenticated,
+  }));
+
   // If alredy logged, redirect
-  if (currentUser) {
+  if (isAuthenticated) {
     return <Redirect to="/" />;
   }
 

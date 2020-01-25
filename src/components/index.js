@@ -10,3 +10,4 @@ export { default as Checkbox } from './Checkbox/Checkbox';
 export { default as SearchBar } from './SearchBar/SearchBar';
 export { default as RadioButton } from './RadioButton/RadioButton';
 export { default as LogoutButton } from './LogoutButton/LogoutButton';
+export { default as Spinner } from './Spinner/Spinner';

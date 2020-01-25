@@ -3,6 +3,7 @@ import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
 import { toast } from 'react-toastify';
 import ReactRouterPropTypes from 'react-router-prop-types';
+import { useSelector } from 'react-redux';
 import useStyles from '../styles';
 import {
   PasswordInput,
@@ -12,9 +13,10 @@ import {
   UnderlinedTitle,
   Logo,
 } from '../../../components';
-import { AuthContext } from '../../../providers/Auth';
+// import { AuthContext } from '../../../providers/Auth';
 import validatePassword from '../../../utils/validators/validatePassword';
 import { signUp } from '../../../services/Firebase';
+import showErrorNotification from '../../../utils/functions/showErrorNotification';
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
@@ -32,7 +34,7 @@ const SignUp = ({ history }) => {
       } catch (error) {
         const { message } = error;
         // Show the message error from firebase request
-        toast.error(message);
+        showErrorNotification(message);
       }
     },
     [history],
@@ -40,9 +42,14 @@ const SignUp = ({ history }) => {
 
   const classes = useStyles();
 
-  const { currentUser } = useContext(AuthContext);
+  // const { currentUser } = useContext(AuthContext);
+
+  const { isAuthenticated } = useSelector(state => ({
+    isAuthenticated: state.auth.isAuthenticated,
+  }));
+
   // If alredy logged, redirect
-  if (currentUser) {
+  if (isAuthenticated) {
     return <Redirect to="/" />;
   }
 
