@@ -1,6 +1,7 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { Types as searchArtistTypes } from '../../Ducks/searchArtist';
 import { getArtist } from '../../../services/Api';
+import showErrorNotification from '../../../utils/functions/showErrorNotification';
 
 function* actionWatcher(action) {
   try {
@@ -21,6 +22,7 @@ function* actionWatcher(action) {
       type: searchArtistTypes.ERROR,
       error: e.toString(),
     });
+    showErrorNotification(e.message);
   }
 }
 

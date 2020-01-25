@@ -1,6 +1,7 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { Types as searchAlbumTypes } from '../../Ducks/searchAlbum';
 import { getAlbum } from '../../../services/Api';
+import showErrorNotification from '../../../utils/functions/showErrorNotification';
 
 function* actionWatcher(action) {
   try {
@@ -17,6 +18,7 @@ function* actionWatcher(action) {
       type: searchAlbumTypes.ERROR,
       error: e.toString(),
     });
+    showErrorNotification(e.message);
   }
 }
 
