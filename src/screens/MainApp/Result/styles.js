@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
   },
   tags: {
-    marginTop: theme.spacing(3),
+    margin: theme.spacing(2),
     display: 'flex',
     // width: '100%',
     justifyContent: 'center',
