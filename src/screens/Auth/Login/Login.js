@@ -14,7 +14,7 @@ import {
 import useStyles from '../styles';
 import { actions as authActions } from '../../../store/Ducks/auth';
 
-const Login = ({ history }) => {
+const Login = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 

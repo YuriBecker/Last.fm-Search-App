@@ -1,9 +1,8 @@
-import React, { useCallback, useContext } from 'react';
+import React from 'react';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
-import { toast } from 'react-toastify';
 import ReactRouterPropTypes from 'react-router-prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import useStyles from '../styles';
 import {
   PasswordInput,
@@ -13,36 +12,24 @@ import {
   UnderlinedTitle,
   Logo,
 } from '../../../components';
-// import { AuthContext } from '../../../providers/Auth';
 import validatePassword from '../../../utils/validators/validatePassword';
-import { signUp } from '../../../services/Firebase';
-import showErrorNotification from '../../../utils/functions/showErrorNotification';
+import { actions as authActions } from '../../../store/Ducks/auth';
 
-const SignUp = ({ history }) => {
-  const handleSignUp = useCallback(
-    async event => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      // Validate password to avoid a error request
-      if (!validatePassword(password.value)) {
-        return;
-      }
-      try {
-        await signUp(email.value, password.value);
-        // Redirect to the Main App
-        history.push('/');
-      } catch (error) {
-        const { message } = error;
-        // Show the message error from firebase request
-        showErrorNotification(message);
-      }
-    },
-    [history],
-  );
-
+const SignUp = () => {
+  const dispatch = useDispatch();
   const classes = useStyles();
 
-  // const { currentUser } = useContext(AuthContext);
+  const handleSignUp = event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+
+    // Validate password to avoid a error request
+    if (!validatePassword(password.value)) {
+      return;
+    }
+
+    dispatch(authActions.requestSignUp(email.value, password.value));
+  };
 
   const { isAuthenticated } = useSelector(state => ({
     isAuthenticated: state.auth.isAuthenticated,
