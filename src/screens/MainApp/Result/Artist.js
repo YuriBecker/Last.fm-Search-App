@@ -65,22 +65,38 @@ const Artist = () => {
                 >
                   {removeLastFmLinkFromString(artist?.bio?.summary)}
                 </Typography>
-                <Typography
-                  variant="caption"
-                  gutterBottom
-                  align="right"
-                  style={{ width: '100%', fontWeight: 'bold' }}
-                >
-                  {'View on '}
-                  <a
-                    href={artist?.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ textDecoration: 'none', color: colors.secondary }}
+
+                <div className={classes.footerInfo}>
+                  <Typography
+                    variant="caption"
+                    gutterBottom
+                    align="left"
+                    style={{ width: '100%', fontWeight: 'bold' }}
                   >
-                    Last.fm
-                  </a>
-                </Typography>
+                    Listeners:
+                    <p style={{ color: colors.secondary, display: 'inline' }}>
+                      {' '}
+                      {artist?.stats.listeners}{' '}
+                    </p>
+                  </Typography>
+
+                  <Typography
+                    variant="caption"
+                    gutterBottom
+                    align="right"
+                    style={{ width: '100%', fontWeight: 'bold' }}
+                  >
+                    {'View on '}
+                    <a
+                      href={artist?.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none', color: colors.secondary }}
+                    >
+                      Last.fm
+                    </a>
+                  </Typography>
+                </div>
 
                 <div className={classes.similars}>
                   <Typography

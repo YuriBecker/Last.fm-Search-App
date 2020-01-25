@@ -51,6 +51,13 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `1px solid ${colors.primary}`,
     padding: theme.spacing(2),
   },
+  footerInfo: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'space-around',
+    width: '100%',
+  },
 }));
 
 export default useStyles;
