@@ -1,6 +1,6 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
-import { Types as searchArtistTypes } from '../Ducks/searchArtist';
-import { getArtist } from '../../services/Api';
+import { Types as searchArtistTypes } from '../../Ducks/searchArtist';
+import { getArtist } from '../../../services/Api';
 
 function* actionWatcher(action) {
   try {

@@ -1,6 +1,6 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
-import { Types as searchAlbumTypes } from '../Ducks/searchAlbum';
-import { getAlbum } from '../../services/Api';
+import { Types as searchAlbumTypes } from '../../Ducks/searchAlbum';
+import { getAlbum } from '../../../services/Api';
 
 function* actionWatcher(action) {
   try {
