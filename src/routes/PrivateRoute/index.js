@@ -1,18 +1,30 @@
-/* eslint-disable react/jsx-curly-newline */
-import React, { useContext } from 'react';
+import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { AuthContext } from '../../providers/Auth';
+import PropTypes from 'prop-types';
+import LoadingUserInfo from '../../screens/Loading/LoadingUserInfo';
 
-const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
-  const { currentUser } = useContext(AuthContext);
-  return (
-    <Route
-      {...rest}
-      render={routeProps =>
-        currentUser ? <RouteComponent {...routeProps} /> : <Redirect to="/login" />
-      }
-    />
-  );
-};
+const PrivateRoute = ({ component: Component, isAuthenticated, isVerifying, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => {
+      if (isAuthenticated) return <Component {...props} />;
+      if (isVerifying) return <LoadingUserInfo />;
+      return (
+        <Redirect
+          to={{
+            pathname: '/login',
+            state: { from: props.location },
+          }}
+        />
+      );
+    }}
+  />
+);
 
 export default PrivateRoute;
+
+PrivateRoute.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired,
+  isVerifying: PropTypes.bool.isRequired,
+  component: PropTypes.func.isRequired,
+};
