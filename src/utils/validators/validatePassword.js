@@ -1,8 +1,8 @@
-import { toast } from 'react-toastify';
+import showErrorNotification from '../functions/showErrorNotification';
 
 const validatePassword = password => {
   if (password.length < 6) {
-    toast.error('Password should be at least 6 characters');
+    showErrorNotification('Password should be at least 6 characters');
     return false;
   }
   return true;

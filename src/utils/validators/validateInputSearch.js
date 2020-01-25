@@ -1,8 +1,8 @@
-import { toast } from 'react-toastify';
+import showErrorNotification from '../functions/showErrorNotification';
 
 const validateInputSearch = query => {
   if (!query) {
-    toast.error("Search can't be empty");
+    showErrorNotification("Search can't be empty");
     return false;
   }
   return true;
