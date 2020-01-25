@@ -19,3 +19,14 @@ export const login = (email, password) =>
 
 export const signUp = (email, password) =>
   Firebase.auth().createUserWithEmailAndPassword(email, password);
+
+export const verifyAuth = () =>
+  new Promise((resolve, reject) => {
+    Firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        resolve(user);
+      } else {
+        reject(new Error('User not logged'));
+      }
+    });
+  });
