@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
-import ReactRouterPropTypes from 'react-router-prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import useStyles from '../styles';
+import LoadingUserInfo from '../../Loading/LoadingUserInfo';
 import {
   PasswordInput,
   Button,
@@ -31,8 +31,9 @@ const SignUp = () => {
     dispatch(authActions.requestSignUp(email.value, password.value));
   };
 
-  const { isAuthenticated } = useSelector(state => ({
+  const { isAuthenticated, isVerifying } = useSelector(state => ({
     isAuthenticated: state.auth.isAuthenticated,
+    isVerifying: state.auth.isVerifying,
   }));
 
   // If alredy logged, redirect
@@ -40,7 +41,9 @@ const SignUp = () => {
     return <Redirect to="/" />;
   }
 
-  return (
+  return isVerifying ? (
+    <LoadingUserInfo />
+  ) : (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Logo />
@@ -63,7 +66,3 @@ const SignUp = () => {
 };
 
 export default withRouter(SignUp);
-
-SignUp.propTypes = {
-  history: ReactRouterPropTypes.history.isRequired,
-};

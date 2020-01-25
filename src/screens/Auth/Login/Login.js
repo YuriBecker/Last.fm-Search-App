@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
-import ReactRouterPropTypes from 'react-router-prop-types';
+
 import {
   Button,
   Link,
@@ -13,6 +13,7 @@ import {
 } from '../../../components';
 import useStyles from '../styles';
 import { actions as authActions } from '../../../store/Ducks/auth';
+import LoadingUserInfo from '../../Loading/LoadingUserInfo';
 
 const Login = () => {
   const classes = useStyles();
@@ -24,8 +25,9 @@ const Login = () => {
     dispatch(authActions.requestLogin(email.value, password.value));
   };
 
-  const { isAuthenticated } = useSelector(state => ({
+  const { isAuthenticated, isVerifying } = useSelector(state => ({
     isAuthenticated: state.auth.isAuthenticated,
+    isVerifying: state.auth.isVerifying,
   }));
 
   // If alredy logged, redirect
@@ -33,7 +35,9 @@ const Login = () => {
     return <Redirect to="/" />;
   }
 
-  return (
+  return isVerifying ? (
+    <LoadingUserInfo />
+  ) : (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Logo />
@@ -56,7 +60,3 @@ const Login = () => {
 };
 
 export default withRouter(Login);
-
-Login.propTypes = {
-  history: ReactRouterPropTypes.history.isRequired,
-};
