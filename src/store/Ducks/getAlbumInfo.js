@@ -45,8 +45,8 @@ const getAlbumInfoReducer = (state = INITIAL_STATE, action) => {
 
 // Action Creators
 export const actions = {
-  getAlbumInfo: mbid => {
-    return { type: Types.REQUEST, mbid };
+  getAlbumInfo: (artistName, albumName) => {
+    return { type: Types.REQUEST, payload: { artistName, albumName } };
   },
 };
 

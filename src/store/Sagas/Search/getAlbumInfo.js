@@ -5,9 +5,13 @@ import showErrorNotification from '../../../utils/functions/showErrorNotificatio
 
 function* actionWatcher(action) {
   try {
-    const { mbid } = action;
+    const { artistName, albumName } = action.payload;
 
-    const { data } = yield call(getAlbumInfo, mbid);
+    const { data } = yield call(getAlbumInfo, artistName, albumName);
+
+    if (data.error) {
+      throw new Error(data.message);
+    }
 
     yield put({
       type: getAlbumInfoTypes.SUCCESS,
