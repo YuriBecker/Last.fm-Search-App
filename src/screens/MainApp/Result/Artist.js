@@ -59,19 +59,13 @@ const Artist = () => {
               <>
                 <UnderlinedTitle variant="h4">{artist?.name}</UnderlinedTitle>
                 <div className={classes.tags}>
-                  <TagList tags={artist?.tags?.tag} onClick />
+                  <TagList tags={artist?.tags?.tag} />
                 </div>
 
                 {/* Verify if has a valid info  */}
                 {artist.bio.content && (
                   <>
-                    <Typography
-                      variant="body1"
-                      gutterBottom
-                      paragraph
-                      align="justify"
-                      style={{ alignSelf: 'flex-start' }}
-                    >
+                    <Typography variant="body1" gutterBottom paragraph align="justify">
                       {removeLastFmLinkFromString(artist?.bio?.summary)}
                     </Typography>
 
