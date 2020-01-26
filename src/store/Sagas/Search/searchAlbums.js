@@ -1,13 +1,23 @@
-import { takeLatest, put, call } from 'redux-saga/effects';
+import { takeLatest, put, call, select } from 'redux-saga/effects';
 import { Types as searchAlbumsTypes } from '../../Ducks/searchAlbums';
+import { Types as historyTypes } from '../../Ducks/history';
 import { searchAlbums } from '../../../services/Api';
 import showErrorNotification from '../../../utils/functions/showErrorNotification';
+import { getUid } from '../../Selectors/Auth';
 
 function* actionWatcher(action) {
   try {
     const { albumName } = action;
 
     const { data } = yield call(searchAlbums, albumName);
+
+    const uid = yield select(getUid);
+
+    yield put({
+      type: historyTypes.ALBUM_ADD,
+      albumName,
+      uid,
+    });
 
     yield put({
       type: searchAlbumsTypes.SUCCESS,

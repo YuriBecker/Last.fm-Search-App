@@ -1,16 +1,20 @@
-import { takeLatest, put, call, all } from 'redux-saga/effects';
+import { takeLatest, put, call, all, select } from 'redux-saga/effects';
 import { Types as searchArtistTypes } from '../../Ducks/searchArtist';
+import { Types as historyTypes } from '../../Ducks/history';
 import { getArtist, getArtistTopAlbums } from '../../../services/Api';
 import showErrorNotification from '../../../utils/functions/showErrorNotification';
+import { getUid } from '../../Selectors/Auth';
 
 function* actionWatcher(action) {
   try {
-    const { artistName } = action;
+    const { artistName, saveInHistory } = action;
+
     // Get artist info and yours top albums
     const [artist, artistTopAlbums] = yield all([
       call(getArtist, artistName),
       call(getArtistTopAlbums, artistName),
     ]);
+
     // Extract data
     const artistData = artist.data;
     const artistTopAlbumsData = artistTopAlbums.data;
@@ -18,8 +22,19 @@ function* actionWatcher(action) {
     if (artistData.error) {
       throw new Error(artistData.message);
     }
+
     // Inject topAlbums data into the artist data
     artistData.artist.albums = artistTopAlbumsData;
+
+    if (saveInHistory) {
+      const uid = yield select(getUid);
+
+      yield put({
+        type: historyTypes.ARTIST_ADD,
+        artistName: artistData.artist.name,
+        uid,
+      });
+    }
 
     yield put({
       type: searchArtistTypes.SUCCESS,
