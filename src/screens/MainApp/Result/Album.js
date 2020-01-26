@@ -20,9 +20,9 @@ const Album = () => {
     albums: state.searchAlbums.info,
   }));
 
-  const handleAlbumViewInfo = mbid => {
+  const handleAlbumViewInfo = (artistName, albumName) => {
     setRedirectAlbumInfo(true);
-    dispatch(getAlbumInfoActions.getAlbumInfo(mbid));
+    dispatch(getAlbumInfoActions.getAlbumInfo(artistName, albumName));
   };
 
   // redirect if search error
@@ -62,7 +62,7 @@ const Album = () => {
                           width={100}
                           height={100}
                           style={{ margin: '3px', cursor: 'pointer' }}
-                          onClick={() => handleAlbumViewInfo(album.mbid)}
+                          onClick={() => handleAlbumViewInfo(album.artist, album.name)}
                         />
                       </Tooltip>
                     </div>

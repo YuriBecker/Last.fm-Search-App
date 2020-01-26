@@ -32,9 +32,9 @@ const Artist = () => {
     artist: state.searchArtist.info,
   }));
 
-  const handleAlbumViewInfo = mbid => {
+  const handleAlbumViewInfo = (artistName, albumName) => {
     setRedirectAlbumInfo(true);
-    dispatch(getAlbumInfoActions.getAlbumInfo(mbid));
+    dispatch(getAlbumInfoActions.getAlbumInfo(artistName, albumName));
   };
 
   // redirect if search error
@@ -61,17 +61,25 @@ const Artist = () => {
                   <TagList tags={artist?.tags?.tag} onClick />
                 </div>
 
-                <Typography
-                  variant="body1"
-                  gutterBottom
-                  paragraph
-                  align="justify"
-                  style={{ alignSelf: 'flex-start' }}
-                >
-                  {removeLastFmLinkFromString(artist?.bio?.summary)}
-                </Typography>
+                {/* Verify if has a valid info  */}
+                {artist.bio.content && (
+                  <>
+                    <Typography
+                      variant="body1"
+                      gutterBottom
+                      paragraph
+                      align="justify"
+                      style={{ alignSelf: 'flex-start' }}
+                    >
+                      {removeLastFmLinkFromString(artist?.bio?.summary)}
+                    </Typography>
 
-                <FooterInfoArtist numListeners={artist?.stats?.listeners} urlLastFm={artist?.url} />
+                    <FooterInfoArtist
+                      numListeners={artist?.stats?.listeners}
+                      urlLastFm={artist?.url}
+                    />
+                  </>
+                )}
 
                 <div className={classes.albums}>
                   <Typography variant="h5" gutterBottom align="center" style={{ width: '100%' }}>
@@ -80,7 +88,9 @@ const Artist = () => {
 
                   <AlbumsList
                     albums={artist?.albums?.topalbums?.album}
-                    onClickAlbum={mbid => handleAlbumViewInfo(mbid)}
+                    onClickAlbum={(artistName, albumName) =>
+                      handleAlbumViewInfo(artistName, albumName)
+                    }
                   />
                 </div>
 
@@ -96,7 +106,6 @@ const Artist = () => {
 
                   <SimilarArtistsList artists={artist?.similar?.artist} />
                 </div>
-
                 <Button className={classes.button} onClick={() => setRedirect(true)}>
                   Search again
                 </Button>
