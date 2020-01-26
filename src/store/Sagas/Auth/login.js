@@ -8,13 +8,13 @@ function* actionWatcher(action) {
   try {
     const { email, password } = action.payload;
 
-    const user = yield call(login, email, password);
+    const userData = yield call(login, email, password);
 
     showSuccessNotification('Login successful!');
 
     yield put({
       type: authTypes.LOGIN_SUCCESS,
-      user,
+      user: userData.user,
     });
   } catch (e) {
     yield put({
