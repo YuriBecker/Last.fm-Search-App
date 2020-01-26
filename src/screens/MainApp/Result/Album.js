@@ -14,6 +14,7 @@ const Album = () => {
   const classes = useStyles();
   const [redirectHome, setRedirectHome] = useState(false);
   const [redirectAlbumInfo, setRedirectAlbumInfo] = useState(false);
+
   const { loading, success, albums } = useSelector(state => ({
     loading: state.searchAlbums.loading,
     success: state.searchAlbums.success,
@@ -38,7 +39,9 @@ const Album = () => {
     <>
       <Container component="main" maxWidth="sm">
         <div className={classes.mainDiv}>
-          <Logo width={250} height={120} />
+          <div onClick={() => setRedirectHome(true)} role="img">
+            <Logo width={250} height={120} cursorPointer />
+          </div>
           <Container component="div" className={classes.container} maxWidth="sm">
             {loading ? (
               <Spinner />
