@@ -19,7 +19,7 @@ export const getArtistTopAlbums = artistName => {
   );
 };
 
-export const getAlbum = albumName => {
+export const searchAlbums = albumName => {
   return api.get(
     `?method=album.search&album=${albumName}&api_key=${API_KEY}&format=json&autocorrect=1&limit=10`,
   );

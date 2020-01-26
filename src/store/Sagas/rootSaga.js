@@ -1,6 +1,6 @@
 import { all } from 'redux-saga/effects';
 
-import searchAlbum from './Search/searchAlbum';
+import searchAlbums from './Search/searchAlbums';
 import getAlbumInfo from './Search/getAlbumInfo';
 import SearchArtist from './Search/searchArtist';
 import login from './Auth/login';
@@ -10,7 +10,7 @@ import verify from './Auth/verify';
 
 export default function* rootSaga() {
   yield all([
-    ...searchAlbum,
+    ...searchAlbums,
     ...SearchArtist,
     ...login,
     ...logout,

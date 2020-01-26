@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 };
 
 // Reducer
-const searchAlbumReducer = (state = INITIAL_STATE, action) => {
+const historyReducer = (state = INITIAL_STATE, action) => {
   const { type } = action;
 
   switch (type) {
@@ -49,4 +49,4 @@ export const actions = {
   },
 };
 
-export default searchAlbumReducer;
+export default historyReducer;

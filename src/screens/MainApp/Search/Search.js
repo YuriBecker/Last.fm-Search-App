@@ -15,7 +15,7 @@ import {
 } from '../../../components';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
-import { actions as searchAlbumActions } from '../../../store/Ducks/searchAlbum';
+import { actions as searchAlbumsActions } from '../../../store/Ducks/searchAlbums';
 import validateInputSearch from '../../../utils/validators/validateInputSearch';
 
 const MainApp = () => {
@@ -43,7 +43,7 @@ const MainApp = () => {
     }
 
     if (searchType === 'artist') dispatch(searchArtistActions.searchArtist(searchQuery));
-    else dispatch(searchAlbumActions.searchAlbum(searchQuery));
+    else dispatch(searchAlbumsActions.searchAlbums(searchQuery));
 
     setRedirect(true);
   };
@@ -86,20 +86,6 @@ const MainApp = () => {
       </Container>
       <LogoutButton onClick={() => dispatch(authActions.requestLogout())} />
     </>
-
-    // <div className={classes.historyContainer}>
-    //   <Chip variant="outlined" color="secondary" onDelete={handleDelete} />
-    //   {historySearch.map(data => {
-    //     return (
-    //       <Chip
-    //         key={data.key}
-    //         label={data.label}
-    //         onDelete={chip => handleDelete(chip)}
-    //         className={classes.chip}
-    //       />
-    //     );
-    //   })}
-    // </div>
   );
 };
 

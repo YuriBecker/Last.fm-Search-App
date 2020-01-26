@@ -1,25 +1,25 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
-import { Types as searchAlbumTypes } from '../../Ducks/searchAlbum';
-import { getAlbum } from '../../../services/Api';
+import { Types as searchAlbumsTypes } from '../../Ducks/searchAlbums';
+import { searchAlbums } from '../../../services/Api';
 import showErrorNotification from '../../../utils/functions/showErrorNotification';
 
 function* actionWatcher(action) {
   try {
     const { albumName } = action;
 
-    const { data } = yield call(getAlbum, albumName);
+    const { data } = yield call(searchAlbums, albumName);
 
     yield put({
-      type: searchAlbumTypes.SUCCESS,
+      type: searchAlbumsTypes.SUCCESS,
       info: data.results.albummatches.album,
     });
   } catch (e) {
     yield put({
-      type: searchAlbumTypes.ERROR,
+      type: searchAlbumsTypes.ERROR,
       error: e.toString(),
     });
     showErrorNotification(e.message);
   }
 }
 
-export default [takeLatest(searchAlbumTypes.REQUEST, actionWatcher)];
+export default [takeLatest(searchAlbumsTypes.REQUEST, actionWatcher)];

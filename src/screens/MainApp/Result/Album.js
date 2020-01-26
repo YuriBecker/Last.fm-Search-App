@@ -15,9 +15,9 @@ const Album = () => {
   const [redirectHome, setRedirectHome] = useState(false);
   const [redirectAlbumInfo, setRedirectAlbumInfo] = useState(false);
   const { loading, success, albums } = useSelector(state => ({
-    loading: state.searchAlbum.loading,
-    success: state.searchAlbum.success,
-    albums: state.searchAlbum.info,
+    loading: state.searchAlbums.loading,
+    success: state.searchAlbums.success,
+    albums: state.searchAlbums.info,
   }));
 
   const handleAlbumViewInfo = mbid => {

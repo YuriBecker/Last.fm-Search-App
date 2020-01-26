@@ -1,7 +1,7 @@
 export const Types = {
-  REQUEST: 'searchAlbum/REQUEST',
-  SUCCESS: 'searchAlbum/SUCCESS',
-  ERROR: 'searchAlbum/ERROR',
+  REQUEST: 'searchAlbums/REQUEST',
+  SUCCESS: 'searchAlbums/SUCCESS',
+  ERROR: 'searchAlbums/ERROR',
 };
 
 const INITIAL_STATE = {
@@ -12,7 +12,7 @@ const INITIAL_STATE = {
 };
 
 // Reducer
-const searchAlbumReducer = (state = INITIAL_STATE, action) => {
+const searchAlbumsReducer = (state = INITIAL_STATE, action) => {
   const { type } = action;
 
   switch (type) {
@@ -45,9 +45,9 @@ const searchAlbumReducer = (state = INITIAL_STATE, action) => {
 
 // Action Creators
 export const actions = {
-  searchAlbum: albumName => {
+  searchAlbums: albumName => {
     return { type: Types.REQUEST, albumName };
   },
 };
 
-export default searchAlbumReducer;
+export default searchAlbumsReducer;
