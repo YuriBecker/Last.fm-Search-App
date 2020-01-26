@@ -45,8 +45,8 @@ const searchArtistReducer = (state = INITIAL_STATE, action) => {
 
 // Action Creators
 export const actions = {
-  searchArtist: artistName => {
-    return { type: Types.REQUEST, artistName };
+  searchArtist: (artistName, saveInHistory) => {
+    return { type: Types.REQUEST, artistName, saveInHistory };
   },
 };
 

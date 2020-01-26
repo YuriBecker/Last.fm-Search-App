@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import searchArtist from './searchArtist';
 import searchAlbums from './searchAlbums';
 import getAlbumInfo from './getAlbumInfo';
+import history from './history';
 import auth from './auth';
 
 export default combineReducers({
@@ -10,4 +11,5 @@ export default combineReducers({
   searchAlbums,
   getAlbumInfo,
   auth,
+  history,
 });
