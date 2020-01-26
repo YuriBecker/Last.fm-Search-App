@@ -7,7 +7,7 @@ const TrackList = ({ tracks }) => {
   return tracks.map(track => (
     <Tag
       key={track.name}
-      label={`${formatMusicTime(track.duration)} - ${track.name}`}
+      label={`${track.name}  -  ${formatMusicTime(track.duration)}`}
       style={{ margin: '8px' }}
       variant="outlined"
       component="a"
