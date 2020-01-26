@@ -17,12 +17,14 @@ import {
 import { actions as authActions } from '../../../store/Ducks/auth';
 import useStyles from './styles';
 import removeLastFmLinkFromString from '../../../utils/functions/removeLastFmLinkFromString';
+import { actions as getAlbumInfoActions } from '../../../store/Ducks/getAlbumInfo';
 
 const Artist = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
   const [redirect, setRedirect] = useState(false);
+  const [redirectAlbumInfo, setRedirectAlbumInfo] = useState(false);
 
   const { loading, success, artist } = useSelector(state => ({
     loading: state.searchArtist.loading,
@@ -30,11 +32,19 @@ const Artist = () => {
     artist: state.searchArtist.info,
   }));
 
+  const handleAlbumViewInfo = mbid => {
+    setRedirectAlbumInfo(true);
+    dispatch(getAlbumInfoActions.getAlbumInfo(mbid));
+  };
+
   // redirect if search error
   if (!loading && !success) return <Redirect to="/" />;
 
   // redirect if click in new search button
   if (redirect) return <Redirect to="/" />;
+
+  // redirect if click in a album
+  if (redirectAlbumInfo) return <Redirect to="/albumInfo" />;
 
   return (
     <>
@@ -68,7 +78,10 @@ const Artist = () => {
                     Top Albums
                   </Typography>
 
-                  <AlbumsList albums={artist?.albums?.topalbums?.album} />
+                  <AlbumsList
+                    albums={artist?.albums?.topalbums?.album}
+                    onClickAlbum={mbid => handleAlbumViewInfo(mbid)}
+                  />
                 </div>
 
                 <div className={classes.similars}>

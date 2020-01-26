@@ -65,6 +65,15 @@ const useStyles = makeStyles(theme => ({
     // borderBottom: `1px solid ${colors.primary}`,
     padding: theme.spacing(2),
   },
+  albumsContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(2),
+  },
 }));
 
 export default useStyles;

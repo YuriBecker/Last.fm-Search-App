@@ -1,11 +1,83 @@
-import React from 'react';
-import useQuery from '../../../utils/hooks/useQuery';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import React, { useState } from 'react';
+import { Container, Tooltip, Typography } from '@material-ui/core';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router';
+import { Logo, UnderlinedTitle, Button, LogoutButton, Spinner } from '../../../components';
+import { actions as getAlbumInfoActions } from '../../../store/Ducks/getAlbumInfo';
+import { actions as authActions } from '../../../store/Ducks/auth';
+import useStyles from './styles';
 
 const Album = () => {
-  const query = useQuery();
+  const dispatch = useDispatch();
+  const classes = useStyles();
+  const [redirectHome, setRedirectHome] = useState(false);
+  const [redirectAlbumInfo, setRedirectAlbumInfo] = useState(false);
+  const { loading, success, albums } = useSelector(state => ({
+    loading: state.searchAlbum.loading,
+    success: state.searchAlbum.success,
+    albums: state.searchAlbum.info,
+  }));
+
+  const handleAlbumViewInfo = mbid => {
+    setRedirectAlbumInfo(true);
+    dispatch(getAlbumInfoActions.getAlbumInfo(mbid));
+  };
+
+  // redirect if search error
+  if (!loading && !success) return <Redirect to="/" />;
+
+  // redirect if click in new search button
+  if (redirectHome) return <Redirect to="/" />;
+
+  // redirect if click in a album
+  if (redirectAlbumInfo) return <Redirect to="/albumInfo" />;
+
   return (
     <>
-      <h1>Album name: {query.get('name')} </h1>
+      <Container component="main" maxWidth="sm">
+        <div className={classes.mainDiv}>
+          <Logo width={250} height={120} />
+          <Container component="div" className={classes.container} maxWidth="sm">
+            {loading ? (
+              <Spinner />
+            ) : (
+              <>
+                <UnderlinedTitle variant="h4">Results</UnderlinedTitle>
+
+                <div className={classes.albumsContainer}>
+                  {albums.map(album => (
+                    <div
+                      key={album.name}
+                      style={{ display: 'flex', flexDirection: 'column', margin: '5px' }}
+                    >
+                      <Typography variant="subtitle2" gutterBottom style={{ alignSelf: 'center' }}>
+                        {album.artist}
+                      </Typography>
+                      <Tooltip key={album.name} title={album.name}>
+                        <img
+                          src={album.image[1]['#text']}
+                          alt={album.name}
+                          width={100}
+                          height={100}
+                          style={{ margin: '3px', cursor: 'pointer' }}
+                          onClick={() => handleAlbumViewInfo(album.mbid)}
+                        />
+                      </Tooltip>
+                    </div>
+                  ))}
+                </div>
+
+                <Button className={classes.button} onClick={() => setRedirectHome(true)}>
+                  Search again
+                </Button>
+              </>
+            )}
+          </Container>
+        </div>
+      </Container>
+      <LogoutButton onClick={() => dispatch(authActions.requestLogout())} />
     </>
   );
 };
