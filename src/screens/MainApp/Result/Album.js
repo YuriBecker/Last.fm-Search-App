@@ -70,7 +70,7 @@ const Album = () => {
                 </div>
 
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
-                  Search again
+                  New Search
                 </Button>
               </>
             )}

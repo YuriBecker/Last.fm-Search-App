@@ -89,7 +89,8 @@ const Artist = () => {
                   <AlbumsList
                     albums={artist?.albums?.topalbums?.album}
                     onClickAlbum={(artistName, albumName) =>
-                      handleAlbumViewInfo(artistName, albumName)}
+                      handleAlbumViewInfo(artistName, albumName)
+                    }
                   />
                 </div>
 
@@ -106,7 +107,7 @@ const Artist = () => {
                   <SimilarArtistsList artists={artist?.similar?.artist} />
                 </div>
                 <Button className={classes.button} onClick={() => setRedirect(true)}>
-                  Search again
+                  New Search
                 </Button>
               </>
             )}
