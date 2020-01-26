@@ -20,7 +20,7 @@ const historyReducer = (state = INITIAL_STATE, action) => {
       // If alredy have history info
       if (index !== -1) {
         const otherUsersData = state.filter(value => value.uid !== uid);
-        // if artistName alredy in history, update index
+        // if albumName alredy in history, update index
         if (state[index].albums.some(album => album === albumName)) {
           const cleanAlbums = state[index].albums.filter(album => album !== albumName);
           return [
@@ -28,7 +28,7 @@ const historyReducer = (state = INITIAL_STATE, action) => {
             {
               uid,
               albums: [...cleanAlbums, albumName],
-              artists: state[index].artists,
+              artists: [...state[index].artists],
             },
           ];
         }
@@ -37,7 +37,7 @@ const historyReducer = (state = INITIAL_STATE, action) => {
           {
             uid,
             albums: [...state[index].albums, albumName],
-            artists: state[index].artists,
+            artists: [...state[index].artists],
           },
         ];
       }
@@ -47,7 +47,7 @@ const historyReducer = (state = INITIAL_STATE, action) => {
         {
           uid,
           albums: [albumName],
-          artists: [],
+          artists: [...state[index].artists],
         },
       ];
     }
