@@ -16,3 +16,4 @@ export { default as TagList } from './TagList/TagList';
 export { default as SimilarArtistsList } from './SimilarArtistsList/SimilarArtistsList';
 export { default as FooterInfoArtist } from './FooterInfoArtist/FooterInfoArtist';
 export { default as AlbumsList } from './AlbumsList/AlbumsList';
+export { default as TrackList } from './TrackList/TrackList';
