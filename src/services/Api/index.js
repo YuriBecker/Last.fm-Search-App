@@ -25,6 +25,8 @@ export const searchAlbums = albumName => {
   );
 };
 
-export const getAlbumInfo = mbid => {
-  return api.get(`?method=album.getInfo&mbid=${mbid}&api_key=${API_KEY}&format=json&autocorrect=1`);
+export const getAlbumInfo = (artistName, albumName) => {
+  return api.get(
+    `?method=album.getInfo&artist=${artistName}&album=${albumName}&api_key=${API_KEY}&format=json&autocorrect=1`,
+  );
 };
