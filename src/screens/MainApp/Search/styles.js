@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { colors } from 'material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   mainDiv: {
@@ -13,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     height: '300px',
   },
   button: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(5),
   },
   searchContainer: {
     display: 'flex',
@@ -36,6 +38,14 @@ const useStyles = makeStyles(theme => ({
   },
   chip: {
     margin: theme.spacing(0.5),
+  },
+  history: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    padding: theme.spacing(2),
   },
 }));
 

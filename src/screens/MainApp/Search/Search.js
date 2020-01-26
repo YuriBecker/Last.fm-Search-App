@@ -1,9 +1,9 @@
+/* eslint-disable react/jsx-indent */
 /* eslint-disable react/jsx-curly-newline */
 import React, { useState } from 'react';
 import { Container, FormControlLabel, RadioGroup } from '@material-ui/core';
 import { Redirect } from 'react-router';
-// import { Chip } from 'material-ui';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import useStyles from './styles';
 import {
   UnderlinedTitle,
@@ -12,11 +12,14 @@ import {
   SearchBar,
   RadioButton,
   LogoutButton,
+  Tag,
 } from '../../../components';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
 import { actions as searchAlbumsActions } from '../../../store/Ducks/searchAlbums';
 import validateInputSearch from '../../../utils/validators/validateInputSearch';
+import { getUid } from '../../../store/Selectors/Auth';
+import { getUserHistory } from '../../../store/Selectors/History';
 
 const MainApp = () => {
   const classes = useStyles();
@@ -26,17 +29,11 @@ const MainApp = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [redirect, setRedirect] = useState(false);
 
-  // const [historySearch, setHistorySearch] = React.useState([
-  //   { key: 0, label: 'Angular' },
-  //   { key: 1, label: 'jQuery' },
-  //   { key: 2, label: 'Polymer' },
-  //   { key: 3, label: 'React' },
-  //   { key: 4, label: 'Vue.js' },
-  // ]);
-
-  // const handleDelete = chipToDelete => () => {
-  //   setHistorySearch(chips => chips.filter(chip => chip.key !== chipToDelete.key));
-  // };
+  // Getting the user history
+  const uid = useSelector(getUid);
+  const history = useSelector(getUserHistory(uid));
+  const historyArtists = [...history.artists].reverse().slice(0, 9);
+  const historyAlbums = [...history.albums].reverse().slice(0, 9);
 
   const handleSearch = event => {
     event.preventDefault();
@@ -78,11 +75,46 @@ const MainApp = () => {
                 value={searchQuery}
                 onChange={event => setSearchQuery(event.target.value)}
               />
+
               <Button className={classes.button} type="submit">
                 Search
               </Button>
+
+              <UnderlinedTitle variant="subtitle1" align="center">
+                {searchType === 'artist' ? 'Artist Search History' : 'Album Search History'}
+              </UnderlinedTitle>
+              <div className={classes.history}>
+                {searchType === 'artist'
+                  ? historyArtists.map(artist => (
+                      <Tag
+                        key={artist}
+                        label={artist}
+                        style={{ margin: '8px' }}
+                        variant="outlined"
+                        clickable
+                        size="small"
+                        onClick={() => {
+                          dispatch(searchArtistActions.searchArtist(artist, true));
+                          setRedirect(true);
+                        }}
+                      />
+                    ))
+                  : historyAlbums.map(album => (
+                      <Tag
+                        key={album}
+                        label={album}
+                        style={{ margin: '8px' }}
+                        variant="outlined"
+                        clickable
+                        size="small"
+                        onClick={() => {
+                          dispatch(searchAlbumsActions.searchAlbums(album));
+                          setRedirect(true);
+                        }}
+                      />
+                    ))}
+              </div>
             </form>
-            {/* <Chip variant="outlined" color="secondary" onDelete={handleDelete} /> */}
           </Container>
         </div>
       </Container>
