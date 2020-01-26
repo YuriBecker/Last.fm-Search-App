@@ -15,8 +15,8 @@ function* actionWatcher(action) {
 
     yield put({
       type: historyTypes.ALBUM_ADD,
-      albumName,
       uid,
+      albumName,
     });
 
     yield put({

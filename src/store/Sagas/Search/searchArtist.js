@@ -31,8 +31,8 @@ function* actionWatcher(action) {
 
       yield put({
         type: historyTypes.ARTIST_ADD,
-        artistName: artistData.artist.name,
         uid,
+        artistName: artistData.artist.name,
       });
     }
 
