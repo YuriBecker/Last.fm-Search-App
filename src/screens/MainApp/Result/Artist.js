@@ -89,8 +89,7 @@ const Artist = () => {
                   <AlbumsList
                     albums={artist?.albums?.topalbums?.album}
                     onClickAlbum={(artistName, albumName) =>
-                      handleAlbumViewInfo(artistName, albumName)
-                    }
+                      handleAlbumViewInfo(artistName, albumName)}
                   />
                 </div>
 

@@ -74,6 +74,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     padding: theme.spacing(2),
   },
+  artistTitle: {
+    color: colors.secondary,
+    fontSize: '18px',
+    cursor: 'pointer',
+  },
 }));
 
 export default useStyles;
