@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
-
 import {
   Button,
   Link,
@@ -14,6 +13,10 @@ import {
 import useStyles from '../styles';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { Loading } from '../..';
+import {
+  isAuthenticated as selectIsAuthenticated,
+  isVerifying as selectIsVerifying,
+} from '../../../store/Selectors/Auth';
 
 const Login = () => {
   const classes = useStyles();
@@ -25,10 +28,13 @@ const Login = () => {
     dispatch(authActions.requestLogin(email.value, password.value));
   };
 
-  const { isAuthenticated, isVerifying } = useSelector(state => ({
-    isAuthenticated: state.auth.isAuthenticated,
-    isVerifying: state.auth.isVerifying,
-  }));
+  // const { isAuthenticated, isVerifying } = useSelector(state => ({
+  //   isAuthenticated: state.auth.isAuthenticated,
+  //   isVerifying: state.auth.isVerifying,
+  // }));
+
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const isVerifying = useSelector(selectIsVerifying);
 
   // If alredy logged, redirect
   if (isAuthenticated) {

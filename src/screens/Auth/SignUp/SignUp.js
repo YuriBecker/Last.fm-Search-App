@@ -14,6 +14,10 @@ import {
 import validatePassword from '../../../utils/validators/validatePassword';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { Loading } from '../..';
+import {
+  isAuthenticated as selectIsAuthenticated,
+  isVerifying as selectIsVerifying,
+} from '../../../store/Selectors/Auth';
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -31,10 +35,8 @@ const SignUp = () => {
     dispatch(authActions.requestSignUp(email.value, password.value));
   };
 
-  const { isAuthenticated, isVerifying } = useSelector(state => ({
-    isAuthenticated: state.auth.isAuthenticated,
-    isVerifying: state.auth.isVerifying,
-  }));
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const isVerifying = useSelector(selectIsVerifying);
 
   // If alredy logged, redirect
   if (isAuthenticated) {
