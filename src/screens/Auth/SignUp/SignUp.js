@@ -3,7 +3,6 @@ import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import useStyles from '../styles';
-import LoadingUserInfo from '../../Loading/LoadingUserInfo';
 import {
   PasswordInput,
   Button,
@@ -14,6 +13,7 @@ import {
 } from '../../../components';
 import validatePassword from '../../../utils/validators/validatePassword';
 import { actions as authActions } from '../../../store/Ducks/auth';
+import { Loading } from '../..';
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const SignUp = () => {
   }
 
   return isVerifying ? (
-    <LoadingUserInfo />
+    <Loading />
   ) : (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spinner } from '../../components';
 
-const LoadingUserInfo = () => {
+const LoadingScreen = () => {
   return (
     <div
       style={{
@@ -17,4 +17,4 @@ const LoadingUserInfo = () => {
   );
 };
 
-export default LoadingUserInfo;
+export default LoadingScreen;

@@ -13,7 +13,7 @@ import {
 } from '../../../components';
 import useStyles from '../styles';
 import { actions as authActions } from '../../../store/Ducks/auth';
-import LoadingUserInfo from '../../Loading/LoadingUserInfo';
+import { Loading } from '../..';
 
 const Login = () => {
   const classes = useStyles();
@@ -36,7 +36,7 @@ const Login = () => {
   }
 
   return isVerifying ? (
-    <LoadingUserInfo />
+    <Loading />
   ) : (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
