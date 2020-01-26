@@ -15,7 +15,7 @@ function* actionWatcher(action) {
 
     yield put({
       type: getAlbumInfoTypes.SUCCESS,
-      info: data,
+      info: data.album,
     });
   } catch (e) {
     yield put({
