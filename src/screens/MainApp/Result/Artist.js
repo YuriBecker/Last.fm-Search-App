@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-newline */
 import React, { useState } from 'react';
 import { Container } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
