@@ -17,6 +17,7 @@ import {
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
 import { actions as searchAlbumsActions } from '../../../store/Ducks/searchAlbums';
+import { actions as historyActions } from '../../../store/Ducks/history';
 import validateInputSearch from '../../../utils/validators/validateInputSearch';
 import { getUid } from '../../../store/Selectors/Auth';
 import { getUserHistory } from '../../../store/Selectors/History';
@@ -32,8 +33,9 @@ const MainApp = () => {
   // Getting the user history
   const uid = useSelector(getUid);
   const history = useSelector(getUserHistory(uid));
-  const historyArtists = [...history.artists].reverse().slice(0, 9);
-  const historyAlbums = [...history.albums].reverse().slice(0, 9);
+
+  const historyArtists = history !== null ? [...history.artists].reverse().slice(0, 9) : null;
+  const historyAlbums = history !== null ? [...history.albums].reverse().slice(0, 9) : null;
 
   const handleSearch = event => {
     event.preventDefault();
@@ -80,40 +82,53 @@ const MainApp = () => {
                 Search
               </Button>
 
-              <UnderlinedTitle variant="subtitle1" align="center">
-                {searchType === 'artist' ? 'Artist Search History' : 'Album Search History'}
-              </UnderlinedTitle>
-              <div className={classes.history}>
-                {searchType === 'artist'
-                  ? historyArtists.map(artist => (
-                      <Tag
-                        key={artist}
-                        label={artist}
-                        style={{ margin: '8px' }}
-                        variant="outlined"
-                        clickable
-                        size="small"
-                        onClick={() => {
-                          dispatch(searchArtistActions.searchArtist(artist, true));
-                          setRedirect(true);
-                        }}
-                      />
-                    ))
-                  : historyAlbums.map(album => (
-                      <Tag
-                        key={album}
-                        label={album}
-                        style={{ margin: '8px' }}
-                        variant="outlined"
-                        clickable
-                        size="small"
-                        onClick={() => {
-                          dispatch(searchAlbumsActions.searchAlbums(album));
-                          setRedirect(true);
-                        }}
-                      />
-                    ))}
-              </div>
+              {history !== null && (
+                <>
+                  {searchType === 'artist' && historyArtists.length > 0 && (
+                    <UnderlinedTitle variant="subtitle1" align="center">
+                      Artist Search History
+                    </UnderlinedTitle>
+                  )}
+                  {searchType === 'album' && historyAlbums.length > 0 && (
+                    <UnderlinedTitle variant="subtitle1" align="center">
+                      Album Search History
+                    </UnderlinedTitle>
+                  )}
+                  <div className={classes.history}>
+                    {searchType === 'artist'
+                      ? historyArtists.map(artist => (
+                          <Tag
+                            key={artist}
+                            label={artist}
+                            style={{ margin: '8px' }}
+                            variant="outlined"
+                            // clickable
+                            size="small"
+                            onClick={() => {
+                              dispatch(searchArtistActions.searchArtist(artist, true));
+                              setRedirect(true);
+                            }}
+                            onDelete={() => dispatch(historyActions.removeArtists(uid, artist))}
+                          />
+                        ))
+                      : historyAlbums.map(album => (
+                          <Tag
+                            key={album}
+                            label={album}
+                            style={{ margin: '8px' }}
+                            variant="outlined"
+                            clickable
+                            size="small"
+                            onClick={() => {
+                              dispatch(searchAlbumsActions.searchAlbums(album));
+                              setRedirect(true);
+                            }}
+                            onDelete={() => dispatch(historyActions.removeAlbum(uid, album))}
+                          />
+                        ))}
+                  </div>
+                </>
+              )}
             </form>
           </Container>
         </div>

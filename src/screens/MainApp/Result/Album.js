@@ -47,26 +47,34 @@ const Album = () => {
                 <UnderlinedTitle variant="h4">Results</UnderlinedTitle>
 
                 <div className={classes.albumsContainer}>
-                  {albums.map(album => (
-                    <div
-                      key={album.name}
-                      style={{ display: 'flex', flexDirection: 'column', margin: '5px' }}
-                    >
-                      <Typography variant="subtitle2" gutterBottom style={{ alignSelf: 'center' }}>
-                        {album.artist}
-                      </Typography>
-                      <Tooltip key={album.name} title={album.name}>
-                        <img
-                          src={album.image[1]['#text']}
-                          alt={album.name}
-                          width={100}
-                          height={100}
-                          style={{ margin: '3px', cursor: 'pointer' }}
-                          onClick={() => handleAlbumViewInfo(album.artist, album.name)}
-                        />
-                      </Tooltip>
-                    </div>
-                  ))}
+                  {albums.map(
+                    album =>
+                      album.image[1]['#text'] && (
+                        <div
+                          key={album.name}
+                          style={{ display: 'flex', flexDirection: 'column', margin: '5px' }}
+                        >
+                          <Typography
+                            variant="subtitle2"
+                            gutterBottom
+                            style={{ alignSelf: 'center' }}
+                          >
+                            {album.artist}
+                          </Typography>
+
+                          <Tooltip key={album.name} title={album.name}>
+                            <img
+                              src={album.image[1]['#text']}
+                              alt={album.name}
+                              width={100}
+                              height={100}
+                              style={{ margin: '3px', cursor: 'pointer' }}
+                              onClick={() => handleAlbumViewInfo(album.artist, album.name)}
+                            />
+                          </Tooltip>
+                        </div>
+                      ),
+                  )}
                 </div>
 
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
