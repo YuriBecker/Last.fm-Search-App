@@ -25,6 +25,7 @@ const MainApp = () => {
   const [searchType, setSearchType] = useState('artist');
   const [searchQuery, setSearchQuery] = useState('');
   const [redirect, setRedirect] = useState(false);
+
   // const [historySearch, setHistorySearch] = React.useState([
   //   { key: 0, label: 'Angular' },
   //   { key: 1, label: 'jQuery' },
@@ -37,12 +38,13 @@ const MainApp = () => {
   //   setHistorySearch(chips => chips.filter(chip => chip.key !== chipToDelete.key));
   // };
 
-  const handleSearch = () => {
+  const handleSearch = event => {
+    event.preventDefault();
     if (!validateInputSearch(searchQuery)) {
       return;
     }
 
-    if (searchType === 'artist') dispatch(searchArtistActions.searchArtist(searchQuery));
+    if (searchType === 'artist') dispatch(searchArtistActions.searchArtist(searchQuery, true));
     else dispatch(searchAlbumsActions.searchAlbums(searchQuery));
 
     setRedirect(true);
