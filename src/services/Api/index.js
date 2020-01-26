@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import axios from 'axios';
 
 const api = axios.create({
@@ -20,6 +21,10 @@ export const getArtistTopAlbums = artistName => {
 
 export const getAlbum = albumName => {
   return api.get(
-    `?method=album.search&album=${albumName}&api_key=${API_KEY}&format=json&autocorrect=1`,
+    `?method=album.search&album=${albumName}&api_key=${API_KEY}&format=json&autocorrect=1&limit=10`,
   );
+};
+
+export const getAlbumInfo = mbid => {
+  return api.get(`?method=album.getInfo&mbid=${mbid}&api_key=${API_KEY}&format=json&autocorrect=1`);
 };
