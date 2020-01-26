@@ -70,17 +70,17 @@ const MainApp = () => {
               <FormControlLabel value="artist" control={<RadioButton />} label="Artist" />
               <FormControlLabel value="album" control={<RadioButton />} label="Album" />
             </RadioGroup>
-            <div className={classes.searchContainer}>
+            <form onSubmit={handleSearch} className={classes.searchContainer}>
               <SearchBar
                 placeholder="Type to search artists"
                 value={searchQuery}
                 onChange={event => setSearchQuery(event.target.value)}
               />
-              <Button className={classes.button} onClick={handleSearch}>
+              <Button className={classes.button} type="submit">
                 Search
               </Button>
-              {/* <Chip variant="outlined" color="secondary" onDelete={handleDelete} /> */}
-            </div>
+            </form>
+            {/* <Chip variant="outlined" color="secondary" onDelete={handleDelete} /> */}
           </Container>
         </div>
       </Container>
