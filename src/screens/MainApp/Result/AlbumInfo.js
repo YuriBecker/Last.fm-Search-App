@@ -11,10 +11,12 @@ import {
   LogoutButton,
   Spinner,
   TrackList,
+  TagList,
 } from '../../../components';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
 import useStyles from './styles';
+import removeLastFmLinkFromString from '../../../utils/functions/removeLastFmLinkFromString';
 
 const AlbumInfo = () => {
   const dispatch = useDispatch();
@@ -37,7 +39,7 @@ const AlbumInfo = () => {
   if (redirectArtistInfo) return <Redirect to="/artist" />;
 
   const handleClickArtistName = artistName => {
-    dispatch(searchArtistActions.searchArtist(artistName));
+    dispatch(searchArtistActions.searchArtist(artistName, false));
     setRedirectArtistInfo(true);
   };
 
@@ -62,7 +64,17 @@ const AlbumInfo = () => {
                   {album?.artist}
                 </Typography>
 
+                <div className={classes.tags}>
+                  <TagList tags={album?.tags?.tag} onClick />
+                </div>
+
                 <img src={album?.image[3]['#text']} alt={album.name} style={{ margin: '16px' }} />
+
+                {album?.wiki?.content && (
+                  <Typography variant="body1" gutterBottom paragraph align="justify">
+                    {removeLastFmLinkFromString(album?.wiki?.summary)}
+                  </Typography>
+                )}
 
                 <UnderlinedTitle variant="h4" gutterBottom>
                   Tracks
