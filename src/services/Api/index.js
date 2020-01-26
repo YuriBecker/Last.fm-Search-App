@@ -12,6 +12,12 @@ export const getArtist = artistName => {
   );
 };
 
+export const getArtistTopAlbums = artistName => {
+  return api.get(
+    `?method=artist.gettopalbums&artist=${artistName}&api_key=${API_KEY}&format=json&autocorrect=1&limit=10`,
+  );
+};
+
 export const getAlbum = albumName => {
   return api.get(
     `?method=album.search&album=${albumName}&api_key=${API_KEY}&format=json&autocorrect=1`,

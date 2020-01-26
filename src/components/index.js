@@ -15,3 +15,4 @@ export { default as Tag } from './Tag/Tag';
 export { default as TagList } from './TagList/TagList';
 export { default as SimilarArtistsList } from './SimilarArtistsList/SimilarArtistsList';
 export { default as FooterInfoArtist } from './FooterInfoArtist/FooterInfoArtist';
+export { default as AlbumsList } from './AlbumsList/AlbumsList';

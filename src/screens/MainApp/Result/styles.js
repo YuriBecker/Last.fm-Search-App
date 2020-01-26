@@ -55,6 +55,16 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'space-around',
     width: '100%',
   },
+  albums: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    borderTop: `1px solid ${colors.primary}`,
+    // borderBottom: `1px solid ${colors.primary}`,
+    padding: theme.spacing(2),
+  },
 }));
 
 export default useStyles;

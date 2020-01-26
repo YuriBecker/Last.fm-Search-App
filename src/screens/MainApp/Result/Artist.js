@@ -12,6 +12,7 @@ import {
   TagList,
   SimilarArtistsList,
   FooterInfoArtist,
+  AlbumsList,
 } from '../../../components';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import useStyles from './styles';
@@ -60,7 +61,15 @@ const Artist = () => {
                   {removeLastFmLinkFromString(artist?.bio?.summary)}
                 </Typography>
 
-                <FooterInfoArtist numListeners={artist?.stats.listeners} urlLastFm={artist?.url} />
+                <FooterInfoArtist numListeners={artist?.stats?.listeners} urlLastFm={artist?.url} />
+
+                <div className={classes.albums}>
+                  <Typography variant="h5" gutterBottom align="center" style={{ width: '100%' }}>
+                    Top Albums
+                  </Typography>
+
+                  <AlbumsList albums={artist?.albums?.topalbums?.album} />
+                </div>
 
                 <div className={classes.similars}>
                   <Typography
