@@ -19,7 +19,12 @@ const TagList = ({ tags }) => {
 };
 
 TagList.propTypes = {
-  tags: PropTypes.array.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default TagList;

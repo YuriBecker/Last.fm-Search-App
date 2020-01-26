@@ -14,13 +14,17 @@ const SimilarArtistsList = ({ artists }) => {
       variant="outlined"
       clickable
       size="small"
-      onClick={() => dispatch(searchArtistActions.searchArtist(artist.name))}
+      onClick={() => dispatch(searchArtistActions.searchArtist(artist.name, false))}
     />
   ));
 };
 
 SimilarArtistsList.propTypes = {
-  artists: PropTypes.array.isRequired,
+  artists: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default SimilarArtistsList;
