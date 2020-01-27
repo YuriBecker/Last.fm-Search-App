@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b27abb68-eb05-40d6-b10e-ed098156041e/deploy-status)](https://app.netlify.com/sites/lastfm-search/deploys)
 
-## Available Scripts
+# Last.fm Search App
 
-In the project directory, you can run:
+### An app to search for information about artists and albums using the Last.fm public api.
 
-### `yarn start`
+### See online
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- #### [App](https://lastfm-search.netlify.com)
+- #### [Storybook](https://storybook-lastfm-search.netlify.com)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+- Yarn or NPM
+- Node.js
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running the app
 
-### `yarn build`
+On the root folder, run:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+$ yarn
+$ yarn start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Running the storybook
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+On the root folder, run:
 
-### `yarn eject`
+```sh
+$ yarn storybook
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The projects have automatic Jest snapshot testing of the components with [StoryShots](https://github.com/storybookjs/storybook/tree/master/addons/storyshots/storyshots-core).
+- It also has tests with [React Testing Library](https://github.com/testing-library/react-testing-library) with [Jest](https://github.com/facebook/jest).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Running the tests
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+On the root folder, run:
 
-## Learn More
+```sh
+$ yarn test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Last.fm API](https://www.last.fm/api)- Last.fm Data API
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [React Router](https://github.com/ReactTraining/react-router) - Routing library
+- [Material UI](https://material-ui.com/) - UI Components Framework
+- [Firebase Authentication](https://firebase.google.com/docs/auth) - User Authentication Service
+- [Axios](https://github.com/axios/axios) - HTTP Cliente
+- [Redux](https://redux.js.org/) - State Management
+- [Redux Saga](https://github.com/redux-saga/redux-saga) - Side Effect Model for Redux
+- [Redux Persist](https://github.com/rt2zz/redux-persist) - Persist and Rehydrate a Redux Store.
+- [Jest](https://jestjs.io/) - JavaScript Testing Framework
+- [React Testing Library](https://github.com/testing-library/react-testing-library/) - JavaScript Testing utility
+- [ESLint](https://eslint.org/) - JavaScript Linter
