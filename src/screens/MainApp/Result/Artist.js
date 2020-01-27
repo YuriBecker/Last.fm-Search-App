@@ -53,9 +53,7 @@ const Artist = () => {
     <>
       <Container component="main" maxWidth="sm">
         <div className={classes.mainDiv}>
-          <div onClick={() => setRedirect(true)} role="img">
-            <Logo width={250} height={120} cursorPointer />
-          </div>
+          <Logo width={250} height={120} cursorPointer onImageClick={() => setRedirect(true)} />
           <Container component="div" className={classes.container} maxWidth="sm">
             {loading ? (
               <Spinner />
