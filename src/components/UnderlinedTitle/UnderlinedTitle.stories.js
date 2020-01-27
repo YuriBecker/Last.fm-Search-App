@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = () => (
-  <div>
+  <div style={{ float: 'left' }}>
     <UnderlinedTitle>Some Title Underlined</UnderlinedTitle>
   </div>
 );

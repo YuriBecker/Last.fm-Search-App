@@ -10,3 +10,7 @@ export default {
 export const Basic = () => (
   <Tag onClick={action('You clicked')} label="Some tag item" variant="outlined" />
 );
+
+export const Small = () => (
+  <Tag onClick={action('You clicked')} label="Some tag item" variant="outlined" size="small" />
+);

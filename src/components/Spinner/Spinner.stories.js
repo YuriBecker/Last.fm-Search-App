@@ -7,3 +7,4 @@ export default {
 };
 
 export const Default = () => <Spinner />;
+export const CustomSize = () => <Spinner size={100} />;

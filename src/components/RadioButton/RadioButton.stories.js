@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { RadioButton } from '..';
 
 export default {
@@ -7,4 +6,4 @@ export default {
   component: RadioButton,
 };
 
-export const Basic = () => <RadioButton onClick={action('You clicked')} />;
+export const Basic = () => <RadioButton />;
