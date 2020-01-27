@@ -28,11 +28,6 @@ const Login = () => {
     dispatch(authActions.requestLogin(email.value, password.value));
   };
 
-  // const { isAuthenticated, isVerifying } = useSelector(state => ({
-  //   isAuthenticated: state.auth.isAuthenticated,
-  //   isVerifying: state.auth.isVerifying,
-  // }));
-
   const isAuthenticated = useSelector(selectIsAuthenticated);
   const isVerifying = useSelector(selectIsVerifying);
 
