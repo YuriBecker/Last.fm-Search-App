@@ -56,5 +56,7 @@ $ yarn test
 - [Redux Saga](https://github.com/redux-saga/redux-saga) - Side Effect Model for Redux
 - [Redux Persist](https://github.com/rt2zz/redux-persist) - Persist and Rehydrate a Redux Store.
 - [Jest](https://jestjs.io/) - JavaScript Testing Framework
-- [React Testing Library](https://github.com/testing-library/react-testing-library/) - JavaScript Testing utility
+- [React Testing Library](https://github.com/testing-library/react-testing-library) - JavaScript Testing utility
 - [ESLint](https://eslint.org/) - JavaScript Linter
+- [Prop Types](https://github.com/facebook/prop-types) - Runtime Type Checking
+- [Storybook](https://github.com/storybookjs/storybook) - Development Environment for UI Components
