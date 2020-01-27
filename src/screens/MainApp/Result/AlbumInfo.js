@@ -77,10 +77,11 @@ const AlbumInfo = () => {
                     {removeLastFmLinkFromString(album?.wiki?.summary)}
                   </Typography>
                 )}
-
-                <UnderlinedTitle variant="h4" gutterBottom>
-                  Tracks
-                </UnderlinedTitle>
+                {album?.tracks?.track.length > 0 && (
+                  <UnderlinedTitle variant="h4" gutterBottom>
+                    Tracks
+                  </UnderlinedTitle>
+                )}
                 <div className={classes.tags}>
                   <TrackList tracks={album?.tracks?.track} onClick />
                 </div>
