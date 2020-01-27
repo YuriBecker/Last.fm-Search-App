@@ -4,7 +4,13 @@ import logo from '../../assets/images/lastfm_logo.png';
 
 const Logo = ({ width, height, cursorPointer }) => {
   return (
-    <img src={logo} alt="LastFm Logo" width={width} height={height} style={ cursorPointer ? { cursor: 'pointer' }: {}} />
+    <img
+      src={logo}
+      alt="LastFm Logo"
+      width={width}
+      height={height}
+      style={cursorPointer ? { cursor: 'pointer' } : {}}
+    />
   );
 };
 
