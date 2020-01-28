@@ -13,6 +13,11 @@ function* actionWatcher(action) {
 
     const uid = yield select(getUid);
 
+    // If not return any album, dispare a error
+    if (data.results.albummatches.album.length === 0) {
+      throw new Error('Album not found');
+    }
+
     yield put({
       type: historyTypes.ALBUM_ADD,
       uid,
