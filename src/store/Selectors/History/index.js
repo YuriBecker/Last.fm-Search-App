@@ -9,8 +9,10 @@ export const getUserHistory = uid => {
           return data.uid === uid;
         });
         if (index !== -1) return history.filter(item => item.uid === uid)[0];
+        // If the user dont have history
         return null;
       }
+      // If dont have any user history info
       return null;
     },
   );
