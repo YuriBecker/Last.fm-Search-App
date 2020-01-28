@@ -133,46 +133,15 @@ export const actions = {
     };
   },
 
-  receiveLogin: user => {
-    return {
-      type: Types.LOGIN_SUCCESS,
-      user,
-    };
-  },
-
-  loginError: () => {
-    return {
-      type: Types.LOGIN_ERROR,
-    };
-  },
-
   requestLogout: () => {
     return {
       type: Types.LOGOUT_REQUEST,
     };
   },
 
-  receiveLogout: () => {
-    return {
-      type: Types.LOGOUT_SUCCESS,
-    };
-  },
-
-  logoutError: () => {
-    return {
-      type: Types.LOGOUT_ERROR,
-    };
-  },
-
   verifyRequest: () => {
     return {
       type: Types.VERIFY_REQUEST,
-    };
-  },
-
-  verifySuccess: () => {
-    return {
-      type: Types.VERIFY_SUCCESS,
     };
   },
 };
