@@ -12,11 +12,11 @@ import {
   Spinner,
   TrackList,
   TagList,
-} from '../../../components';
-import { actions as authActions } from '../../../store/Ducks/auth';
-import { actions as searchArtistActions } from '../../../store/Ducks/searchArtist';
-import useStyles from './styles';
-import removeLastFmLinkFromString from '../../../utils/functions/removeLastFmLinkFromString';
+} from '../../../../components';
+import { actions as authActions } from '../../../../store/Ducks/auth';
+import { actions as searchArtistActions } from '../../../../store/Ducks/searchArtist';
+import useStyles from '../sharedStyles';
+import removeLastFmLinkFromString from '../../../../utils/functions/removeLastFmLinkFromString';
 
 const AlbumInfo = () => {
   const dispatch = useDispatch();

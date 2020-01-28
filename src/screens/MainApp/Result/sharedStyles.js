@@ -9,13 +9,11 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   container: {
-    // padding: theme.spacing(2),
     margin: theme.spacing(4),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    // border: '2px solid red',
     minHeight: '300px',
   },
   button: {
@@ -24,7 +22,6 @@ const useStyles = makeStyles(theme => ({
   tags: {
     margin: theme.spacing(2),
     display: 'flex',
-    // width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
@@ -62,7 +59,6 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     flexDirection: 'row',
     borderTop: `1px solid ${colors.primary}`,
-    // borderBottom: `1px solid ${colors.primary}`,
     padding: theme.spacing(2),
   },
   albumsContainer: {

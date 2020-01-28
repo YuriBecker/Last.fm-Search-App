@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { Container, Tooltip, Typography } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
-import { Logo, UnderlinedTitle, Button, LogoutButton, Spinner } from '../../../components';
-import { actions as getAlbumInfoActions } from '../../../store/Ducks/getAlbumInfo';
-import { actions as authActions } from '../../../store/Ducks/auth';
-import useStyles from './styles';
+import { Logo, UnderlinedTitle, Button, LogoutButton, Spinner } from '../../../../components';
+import { actions as getAlbumInfoActions } from '../../../../store/Ducks/getAlbumInfo';
+import { actions as authActions } from '../../../../store/Ducks/auth';
+import useStyles from '../sharedStyles';
 
 const Album = () => {
   const dispatch = useDispatch();
@@ -46,7 +46,6 @@ const Album = () => {
             ) : (
               <>
                 <UnderlinedTitle variant="h4">Results</UnderlinedTitle>
-
                 <div className={classes.albumsContainer}>
                   {albums.map(
                     album =>

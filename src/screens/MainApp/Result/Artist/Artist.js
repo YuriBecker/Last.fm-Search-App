@@ -16,17 +16,17 @@ import {
   SimilarArtistsList,
   FooterInfoArtist,
   AlbumsList,
-} from '../../../components';
-import { actions as authActions } from '../../../store/Ducks/auth';
-import useStyles from './styles';
-import removeLastFmLinkFromString from '../../../utils/functions/removeLastFmLinkFromString';
-import { actions as getAlbumInfoActions } from '../../../store/Ducks/getAlbumInfo';
+} from '../../../../components';
+import { actions as authActions } from '../../../../store/Ducks/auth';
+import useStyles from '../sharedStyles';
+import removeLastFmLinkFromString from '../../../../utils/functions/removeLastFmLinkFromString';
+import { actions as getAlbumInfoActions } from '../../../../store/Ducks/getAlbumInfo';
 
 const Artist = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  const [redirect, setRedirect] = useState(false);
+  const [redirectHome, setRedirectHome] = useState(false);
   const [redirectAlbumInfo, setRedirectAlbumInfo] = useState(false);
 
   const { loading, success, artist } = useSelector(state => ({
@@ -44,7 +44,7 @@ const Artist = () => {
   if (!loading && !success) return <Redirect to="/" />;
 
   // redirect if click in new search button
-  if (redirect) return <Redirect to="/" />;
+  if (redirectHome) return <Redirect to="/" />;
 
   // redirect if click in a album
   if (redirectAlbumInfo) return <Redirect to="/albumInfo" />;
@@ -53,7 +53,7 @@ const Artist = () => {
     <>
       <Container component="main" maxWidth="sm">
         <div className={classes.mainDiv}>
-          <Logo width={250} height={120} cursorPointer onImageClick={() => setRedirect(true)} />
+          <Logo width={250} height={120} cursorPointer onImageClick={() => setRedirectHome(true)} />
           <Container component="div" className={classes.container} maxWidth="sm">
             {loading ? (
               <Spinner />
@@ -103,7 +103,7 @@ const Artist = () => {
 
                   <SimilarArtistsList artists={artist?.similar?.artist} />
                 </div>
-                <Button className={classes.button} onClick={() => setRedirect(true)}>
+                <Button className={classes.button} onClick={() => setRedirectHome(true)}>
                   New Search
                 </Button>
               </>
