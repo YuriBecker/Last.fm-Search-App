@@ -17,6 +17,7 @@ import { actions as authActions } from '../../../../store/Ducks/auth';
 import { actions as searchArtistActions } from '../../../../store/Ducks/searchArtist';
 import useStyles from '../sharedStyles';
 import removeLastFmLinkFromString from '../../../../utils/functions/removeLastFmLinkFromString';
+import extractAlbumInfo from '../../../../utils/functions/extractAlbumInfo';
 
 const AlbumInfo = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,16 @@ const AlbumInfo = () => {
     setRedirectArtistInfo(true);
   };
 
+  const {
+    albumTags,
+    albumArtistName,
+    albumLargeCoverLink,
+    albumName,
+    albumTracks,
+    albumSumary,
+    albumContent,
+  } = extractAlbumInfo(album);
+
   return (
     <>
       <Container component="main" maxWidth="sm">
@@ -59,30 +70,34 @@ const AlbumInfo = () => {
                   gutterBottom
                   align="center"
                   className={classes.artistTitle}
-                  onClick={() => handleClickArtistName(album?.artist)}
+                  onClick={() => handleClickArtistName(albumArtistName)}
                 >
-                  {album?.artist}
+                  {albumArtistName}
                 </Typography>
 
                 <div className={classes.tags}>
-                  <TagList tags={album?.tags?.tag} onClick />
+                  <TagList tags={albumTags} onClick />
                 </div>
 
-                <img src={album?.image[3]['#text']} alt={album.name} style={{ margin: '16px' }} />
+                <img src={albumLargeCoverLink} alt={albumName} style={{ margin: '16px' }} />
 
-                {album?.wiki?.content && (
+                {albumContent && (
                   <Typography variant="body1" gutterBottom paragraph align="justify">
-                    {removeLastFmLinkFromString(album?.wiki?.summary)}
+                    {removeLastFmLinkFromString(albumSumary)}
                   </Typography>
                 )}
-                {album?.tracks?.track.length > 0 && (
-                  <UnderlinedTitle variant="h4" gutterBottom>
-                    Tracks
-                  </UnderlinedTitle>
+
+                {albumTracks.length > 0 && (
+                  <>
+                    <UnderlinedTitle variant="h4" gutterBottom>
+                      Tracks
+                    </UnderlinedTitle>
+
+                    <div className={classes.tags}>
+                      <TrackList tracks={albumTracks} onClick />
+                    </div>
+                  </>
                 )}
-                <div className={classes.tags}>
-                  <TrackList tracks={album?.tracks?.track} onClick />
-                </div>
 
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
                   New Search

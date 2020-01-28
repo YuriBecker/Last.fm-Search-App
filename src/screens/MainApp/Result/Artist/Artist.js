@@ -21,6 +21,7 @@ import { actions as authActions } from '../../../../store/Ducks/auth';
 import useStyles from '../sharedStyles';
 import removeLastFmLinkFromString from '../../../../utils/functions/removeLastFmLinkFromString';
 import { actions as getAlbumInfoActions } from '../../../../store/Ducks/getAlbumInfo';
+import extractArtistInfo from '../../../../utils/functions/extractArtistInfo';
 
 const Artist = () => {
   const dispatch = useDispatch();
@@ -49,6 +50,15 @@ const Artist = () => {
   // redirect if click in a album
   if (redirectAlbumInfo) return <Redirect to="/albumInfo" />;
 
+  const {
+    artistName,
+    artistRelatedTags,
+    artistSummary,
+    artistNumListeners,
+    artistTopAlbums,
+    similarArtists,
+    artistUrl,
+  } = extractArtistInfo(artist);
   return (
     <>
       <Container component="main" maxWidth="sm">
@@ -59,22 +69,19 @@ const Artist = () => {
               <Spinner />
             ) : (
               <>
-                <UnderlinedTitle variant="h4">{artist?.name}</UnderlinedTitle>
+                <UnderlinedTitle variant="h4">{artistName}</UnderlinedTitle>
                 <div className={classes.tags}>
-                  <TagList tags={artist?.tags?.tag} />
+                  <TagList tags={artistRelatedTags} />
                 </div>
 
                 {/* Verify if has a valid info  */}
                 {artist.bio.content && (
                   <>
                     <Typography variant="body1" gutterBottom paragraph align="justify">
-                      {removeLastFmLinkFromString(artist?.bio?.summary)}
+                      {removeLastFmLinkFromString(artistSummary)}
                     </Typography>
 
-                    <FooterInfoArtist
-                      numListeners={artist?.stats?.listeners}
-                      urlLastFm={artist?.url}
-                    />
+                    <FooterInfoArtist numListeners={artistNumListeners} urlLastFm={artistUrl} />
                   </>
                 )}
 
@@ -84,9 +91,9 @@ const Artist = () => {
                   </Typography>
 
                   <AlbumsList
-                    albums={artist?.albums?.topalbums?.album}
-                    onClickAlbum={(artistName, albumName) =>
-                      handleAlbumViewInfo(artistName, albumName)
+                    albums={artistTopAlbums}
+                    onClickAlbum={(albumArtistName, albumName) =>
+                      handleAlbumViewInfo(albumArtistName, albumName)
                     }
                   />
                 </div>
@@ -101,7 +108,7 @@ const Artist = () => {
                     Similar artists
                   </Typography>
 
-                  <SimilarArtistsList artists={artist?.similar?.artist} />
+                  <SimilarArtistsList artists={similarArtists} />
                 </div>
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
                   New Search

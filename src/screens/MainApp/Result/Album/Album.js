@@ -8,6 +8,7 @@ import { Logo, UnderlinedTitle, Button, LogoutButton, Spinner } from '../../../.
 import { actions as getAlbumInfoActions } from '../../../../store/Ducks/getAlbumInfo';
 import { actions as authActions } from '../../../../store/Ducks/auth';
 import useStyles from '../sharedStyles';
+import extractAlbumInfo from '../../../../utils/functions/extractAlbumInfo';
 
 const Album = () => {
   const dispatch = useDispatch();
@@ -47,11 +48,14 @@ const Album = () => {
               <>
                 <UnderlinedTitle variant="h4">Results</UnderlinedTitle>
                 <div className={classes.albumsContainer}>
-                  {albums.map(
-                    album =>
-                      album.image[1]['#text'] && (
+                  {albums.map(album => {
+                    const { albumName, albumArtistName, albumSmallCoverLink } = extractAlbumInfo(
+                      album,
+                    );
+                    return (
+                      albumSmallCoverLink && (
                         <div
-                          key={album.name}
+                          key={albumName}
                           style={{ display: 'flex', flexDirection: 'column', margin: '5px' }}
                         >
                           <Typography
@@ -59,22 +63,23 @@ const Album = () => {
                             gutterBottom
                             style={{ alignSelf: 'center' }}
                           >
-                            {album.artist}
+                            {albumArtistName}
                           </Typography>
 
-                          <Tooltip key={album.name} title={album.name}>
+                          <Tooltip key={albumName} title={albumName}>
                             <img
-                              src={album.image[1]['#text']}
-                              alt={album.name}
+                              src={albumSmallCoverLink}
+                              alt={albumName}
                               width={100}
                               height={100}
                               style={{ margin: '3px', cursor: 'pointer' }}
-                              onClick={() => handleAlbumViewInfo(album.artist, album.name)}
+                              onClick={() => handleAlbumViewInfo(albumArtistName, albumName)}
                             />
                           </Tooltip>
                         </div>
-                      ),
-                  )}
+                      )
+                    );
+                  })}
                 </div>
 
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
