@@ -10,7 +10,7 @@ import {
   UnderlinedTitle,
   Logo,
 } from '../../../components';
-import useStyles from '../styles';
+import useStyles from '../sharedStyles';
 import { actions as authActions } from '../../../store/Ducks/auth';
 import { Loading } from '../..';
 import {

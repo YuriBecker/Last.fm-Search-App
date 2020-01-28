@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter, Redirect } from 'react-router';
 import { Container, Grid } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
-import useStyles from '../styles';
+import useStyles from '../sharedStyles';
 import {
   PasswordInput,
   Button,
