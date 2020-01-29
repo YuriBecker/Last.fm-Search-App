@@ -49,7 +49,7 @@ const SignUp = () => {
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Logo />
-        <UnderlinedTitle>Sign Up</UnderlinedTitle>
+        <UnderlinedTitle data-testid="screenTitle">Sign Up</UnderlinedTitle>
         <form className={classes.form} onSubmit={handleSignUp}>
           <EmailInput margin="normal" required fullWidth id="email" autoFocus />
           <PasswordInput margin="normal" required fullWidth id="password" />

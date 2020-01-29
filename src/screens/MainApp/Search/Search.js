@@ -59,7 +59,7 @@ const MainApp = () => {
       <Container component="main" maxWidth="sm">
         <div className={classes.mainDiv}>
           <Logo width={250} height={120} />
-          <UnderlinedTitle>Search</UnderlinedTitle>
+          <UnderlinedTitle data-testid="screenTitle">Search</UnderlinedTitle>
           <Container component="div" className={classes.container} maxWidth="sm">
             <RadioGroup
               defaultValue={searchType}
@@ -73,7 +73,10 @@ const MainApp = () => {
             </RadioGroup>
             <form onSubmit={handleSearch} className={classes.searchContainer}>
               <SearchBar
-                placeholder="Type to search artists"
+                placeholder={
+                  searchType === 'artist' ? 'Type to search artists' : 'Type to search albums'
+                }
+                label={searchType === 'artist' ? 'Type to search artists' : 'Type to search albums'}
                 value={searchQuery}
                 onChange={event => setSearchQuery(event.target.value)}
               />
