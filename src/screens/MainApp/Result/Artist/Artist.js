@@ -22,6 +22,7 @@ import useStyles from '../sharedStyles';
 import removeLastFmLinkFromString from '../../../../utils/functions/removeLastFmLinkFromString';
 import { actions as getAlbumInfoActions } from '../../../../store/Ducks/getAlbumInfo';
 import extractArtistInfo from '../../../../utils/functions/extractArtistInfo';
+import { actions as searchArtistActions } from '../../../../store/Ducks/searchArtist';
 
 const Artist = () => {
   const dispatch = useDispatch();
@@ -108,7 +109,12 @@ const Artist = () => {
                     Similar artists
                   </Typography>
 
-                  <SimilarArtistsList artists={similarArtists} />
+                  <SimilarArtistsList
+                    artists={similarArtists}
+                    onArtistClick={similarArtistName =>
+                      dispatch(searchArtistActions.searchArtist(similarArtistName, false))
+                    }
+                  />
                 </div>
                 <Button className={classes.button} onClick={() => setRedirectHome(true)}>
                   New Search

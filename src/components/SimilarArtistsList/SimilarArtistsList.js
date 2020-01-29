@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import Tag from '../Tag/Tag';
-import { actions as searchArtistActions } from '../../store/Ducks/searchArtist';
 
-const SimilarArtistsList = ({ artists }) => {
-  const dispatch = useDispatch();
+const SimilarArtistsList = ({ artists, onArtistClick }) => {
   return artists.map(artist => (
     <Tag
       key={artist.name}
@@ -14,7 +11,7 @@ const SimilarArtistsList = ({ artists }) => {
       variant="outlined"
       clickable
       size="small"
-      onClick={() => dispatch(searchArtistActions.searchArtist(artist.name, false))}
+      onClick={() => onArtistClick(artist.name)}
     />
   ));
 };
@@ -25,6 +22,7 @@ SimilarArtistsList.propTypes = {
       name: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  onArtistClick: PropTypes.func.isRequired,
 };
 
 export default SimilarArtistsList;
