@@ -11,7 +11,7 @@ Array [
     }
   >
     <img
-      alt="Whatever People Say I Am, That's What I'm Not"
+      alt="One of the Boys"
       aria-describedby={null}
       className=""
       height={80}
@@ -22,18 +22,18 @@ Array [
       onMouseOver={[Function]}
       onTouchEnd={[Function]}
       onTouchStart={[Function]}
-      src="https://lastfm.freetls.fastly.net/i/u/64s/053829a0cd6d4d5d95070b1542cb3f96.png"
+      src="https://lastfm.freetls.fastly.net/i/u/64s/317a50a1835182082e8df461a9cfd78f.png"
       style={
         Object {
           "cursor": "pointer",
           "margin": "3px",
         }
       }
-      title="Whatever People Say I Am, That's What I'm Not"
+      title="One of the Boys"
       width={80}
     />
     <img
-      alt="Is This It"
+      alt="Teenage Dream"
       aria-describedby={null}
       className=""
       height={80}
@@ -44,18 +44,18 @@ Array [
       onMouseOver={[Function]}
       onTouchEnd={[Function]}
       onTouchStart={[Function]}
-      src="https://lastfm.freetls.fastly.net/i/u/64s/29c98431ed68a10f110cf47c89f174b3.png"
+      src="https://lastfm.freetls.fastly.net/i/u/64s/7f7f0eaf56402526b1efe2c7315193e8.png"
       style={
         Object {
           "cursor": "pointer",
           "margin": "3px",
         }
       }
-      title="Is This It"
+      title="Teenage Dream"
       width={80}
     />
     <img
-      alt="Michael Jackson's This Is It"
+      alt="Katy Perry - Teenage Dream: The Complete Confection"
       aria-describedby={null}
       className=""
       height={80}
@@ -66,18 +66,18 @@ Array [
       onMouseOver={[Function]}
       onTouchEnd={[Function]}
       onTouchStart={[Function]}
-      src="https://lastfm.freetls.fastly.net/i/u/64s/b1bf13ec616843f98e55e00ee443d68b.png"
+      src="https://lastfm.freetls.fastly.net/i/u/64s/37837a493636454d8ae5b6c36d705e21.png"
       style={
         Object {
           "cursor": "pointer",
           "margin": "3px",
         }
       }
-      title="Michael Jackson's This Is It"
+      title="Katy Perry - Teenage Dream: The Complete Confection"
       width={80}
     />
     <img
-      alt="This Is Where It Ends"
+      alt="PRISM (Deluxe)"
       aria-describedby={null}
       className=""
       height={80}
@@ -88,14 +88,146 @@ Array [
       onMouseOver={[Function]}
       onTouchEnd={[Function]}
       onTouchStart={[Function]}
-      src="https://lastfm.freetls.fastly.net/i/u/64s/00616fdd34994a12a6dc2a917eb4d02c.png"
+      src="https://lastfm.freetls.fastly.net/i/u/64s/0ee7298f42094893c85b2d3e1f7df197.png"
       style={
         Object {
           "cursor": "pointer",
           "margin": "3px",
         }
       }
-      title="This Is Where It Ends"
+      title="PRISM (Deluxe)"
+      width={80}
+    />
+    <img
+      alt="PRISM"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/8a2ae26d3c704d1afc4a5f6b25a2145b.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="PRISM"
+      width={80}
+    />
+    <img
+      alt="Teenage Dream (Deluxe Edition)"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/a509195c3832473c9b8325882a3c12e7.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Teenage Dream (Deluxe Edition)"
+      width={80}
+    />
+    <img
+      alt="Roar"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/7544db3bb4b366967a76b464c6e8bb42.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Roar"
+      width={80}
+    />
+    <img
+      alt="Ur So Gay"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/2e45d1d4932841cdc19fec73e76fed46.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Ur So Gay"
+      width={80}
+    />
+    <img
+      alt="Witness"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/bcbc75175ea6b827e013908cc95fefeb.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Witness"
+      width={80}
+    />
+    <img
+      alt="Part of Me"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/92a93cbef4752e554e0b3be76b246b79.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Part of Me"
       width={80}
     />
   </div>,
@@ -1489,6 +1621,183 @@ Array [
 ]
 `;
 
+exports[`Storyshots SimilarArtistsList Default 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-812 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+      tabIndex={0}
+    >
+      <span
+        className="MuiChip-label MuiChip-labelSmall"
+      >
+        The Last Shadow Puppets
+      </span>
+    </div>
+    <div
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-812 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+      tabIndex={0}
+    >
+      <span
+        className="MuiChip-label MuiChip-labelSmall"
+      >
+        Alex Turner
+      </span>
+    </div>
+    <div
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-812 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+      tabIndex={0}
+    >
+      <span
+        className="MuiChip-label MuiChip-labelSmall"
+      >
+        Miles Kane
+      </span>
+    </div>
+    <div
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-812 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+      tabIndex={0}
+    >
+      <span
+        className="MuiChip-label MuiChip-labelSmall"
+      >
+        The Strokes
+      </span>
+    </div>
+    <div
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-812 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "8px",
+        }
+      }
+      tabIndex={0}
+    >
+      <span
+        className="MuiChip-label MuiChip-labelSmall"
+      >
+        Cage the Elephant
+      </span>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
 exports[`Storyshots Spinner Custom Size 1`] = `
 Array [
   <div
@@ -1500,7 +1809,7 @@ Array [
     }
   >
     <div
-      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-825 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-859 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
       role="progressbar"
       style={
         Object {
@@ -1562,7 +1871,7 @@ Array [
     }
   >
     <div
-      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-812 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-846 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
       role="progressbar"
       style={
         Object {
@@ -1624,7 +1933,7 @@ Array [
     }
   >
     <div
-      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-838 MuiChip-outlined MuiChip-clickable"
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-872 MuiChip-outlined MuiChip-clickable"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -1684,7 +1993,7 @@ Array [
     }
   >
     <div
-      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-872 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -1744,7 +2053,7 @@ Array [
     }
   >
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-940 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1763,7 +2072,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-940 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1782,7 +2091,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-940 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1801,7 +2110,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-940 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1857,7 +2166,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-937"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-971"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1921,7 +2230,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1117"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1151"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
@@ -1985,7 +2294,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1057 MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1091 MuiFormControl-fullWidth"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2049,7 +2358,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-997"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1031"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
@@ -2119,7 +2428,7 @@ Array [
     }
   >
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1211 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/One+for+the+Road"
       onKeyUp={[Function]}
       role="button"
@@ -2138,7 +2447,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1211 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/_/R+U+Mine%3F"
       onKeyUp={[Function]}
       role="button"
@@ -2157,7 +2466,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1211 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F"
       onKeyUp={[Function]}
       role="button"
