@@ -31,7 +31,7 @@ AlbumsList.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       image: PropTypes.array.isRequired,
-      artist: PropTypes.object.isRequired,
+      artist: PropTypes.string.isRequired,
     }),
   ).isRequired,
   onClickAlbum: PropTypes.func.isRequired,

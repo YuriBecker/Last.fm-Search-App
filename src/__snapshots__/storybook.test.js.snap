@@ -1,5 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AlbumsList Default 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <img
+      alt="Whatever People Say I Am, That's What I'm Not"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/053829a0cd6d4d5d95070b1542cb3f96.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Whatever People Say I Am, That's What I'm Not"
+      width={80}
+    />
+    <img
+      alt="Is This It"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/29c98431ed68a10f110cf47c89f174b3.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Is This It"
+      width={80}
+    />
+    <img
+      alt="Michael Jackson's This Is It"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/b1bf13ec616843f98e55e00ee443d68b.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="Michael Jackson's This Is It"
+      width={80}
+    />
+    <img
+      alt="This Is Where It Ends"
+      aria-describedby={null}
+      className=""
+      height={80}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      src="https://lastfm.freetls.fastly.net/i/u/64s/00616fdd34994a12a6dc2a917eb4d02c.png"
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "3px",
+        }
+      }
+      title="This Is Where It Ends"
+      width={80}
+    />
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
 exports[`Storyshots Button Basic 1`] = `
 Array [
   <div
@@ -11,7 +136,7 @@ Array [
     }
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text WithStyles(ForwardRef(Button))-root-1"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text WithStyles(ForwardRef(Button))-root-12"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -72,7 +197,7 @@ Array [
     }
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text WithStyles(ForwardRef(Button))-root-34"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text WithStyles(ForwardRef(Button))-root-45"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -149,7 +274,7 @@ Array [
   >
     <span
       aria-disabled={false}
-      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-117 MuiCheckbox-root Component-root-109 PrivateSwitchBase-checked-118 Mui-checked Component-checked-110"
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-128 MuiCheckbox-root Component-root-120 PrivateSwitchBase-checked-129 Mui-checked Component-checked-121"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -169,7 +294,7 @@ Array [
       >
         <input
           checked={true}
-          className="PrivateSwitchBase-input-120"
+          className="PrivateSwitchBase-input-131"
           data-indeterminate={false}
           disabled={false}
           onChange={[Function]}
@@ -227,7 +352,7 @@ Array [
   >
     <span
       aria-disabled={false}
-      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-84 MuiCheckbox-root Component-root-76"
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root Component-root-87"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -247,7 +372,7 @@ Array [
       >
         <input
           checked={false}
-          className="PrivateSwitchBase-input-87"
+          className="PrivateSwitchBase-input-98"
           data-indeterminate={false}
           disabled={false}
           onChange={[Function]}
@@ -304,7 +429,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-142"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-153"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -370,7 +495,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-322"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-333"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
@@ -436,7 +561,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-262 MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-273 MuiFormControl-fullWidth"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -502,7 +627,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-202"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-213"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
@@ -581,24 +706,24 @@ Array [
       }
     >
       <div
-        className="makeStyles-footerInfo-382"
+        className="makeStyles-footerInfo-393"
       >
         <span
-          className="MuiTypography-root makeStyles-item-385 MuiTypography-caption MuiTypography-gutterBottom MuiTypography-alignLeft"
+          className="MuiTypography-root makeStyles-item-396 MuiTypography-caption MuiTypography-gutterBottom MuiTypography-alignLeft"
         >
           Listeners: 
           <p
-            className="makeStyles-numListeners-384"
+            className="makeStyles-numListeners-395"
           >
             199878
           </p>
         </span>
         <span
-          className="MuiTypography-root makeStyles-item-385 MuiTypography-caption MuiTypography-gutterBottom MuiTypography-alignRight"
+          className="MuiTypography-root makeStyles-item-396 MuiTypography-caption MuiTypography-gutterBottom MuiTypography-alignRight"
         >
           View on 
           <a
-            className="makeStyles-lastFmLink-383"
+            className="makeStyles-lastFmLink-394"
             href="https://www.last.fm/pt/music/Arctic+Monkeys"
             rel="noopener noreferrer"
             target="_blank"
@@ -794,7 +919,7 @@ Array [
       <button
         aria-describedby={null}
         aria-label="logout"
-        className="MuiButtonBase-root MuiFab-root makeStyles-fab-416 MuiFab-extended MuiFab-sizeSmall MuiFab-primary"
+        className="MuiButtonBase-root MuiFab-root makeStyles-fab-427 MuiFab-extended MuiFab-sizeSmall MuiFab-primary"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -871,7 +996,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-460"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-471"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -937,7 +1062,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-640"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-651"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
@@ -1003,7 +1128,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-580 MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-591 MuiFormControl-fullWidth"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1069,7 +1194,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-520"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-531"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
@@ -1142,7 +1267,7 @@ Array [
   >
     <span
       aria-disabled={false}
-      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-707 MuiRadio-root Component-root-700 MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-718 MuiRadio-root Component-root-711 MuiRadio-colorSecondary MuiIconButton-colorSecondary"
       onBlur={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -1160,13 +1285,13 @@ Array [
         className="MuiIconButton-label"
       >
         <input
-          className="PrivateSwitchBase-input-710"
+          className="PrivateSwitchBase-input-721"
           disabled={false}
           onChange={[Function]}
           type="radio"
         />
         <div
-          className="PrivateRadioButtonIcon-root-723"
+          className="PrivateRadioButtonIcon-root-734"
         >
           <svg
             aria-hidden="true"
@@ -1181,7 +1306,7 @@ Array [
           </svg>
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-724"
+            className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-735"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1231,10 +1356,10 @@ Array [
     }
   >
     <div
-      className="makeStyles-search-768"
+      className="makeStyles-search-779"
     >
       <div
-        className="makeStyles-searchIcon-769"
+        className="makeStyles-searchIcon-780"
       >
         <svg
           aria-hidden="true"
@@ -1249,12 +1374,12 @@ Array [
         </svg>
       </div>
       <div
-        className="MuiInputBase-root makeStyles-inputRoot-770"
+        className="MuiInputBase-root makeStyles-inputRoot-781"
         onClick={[Function]}
       >
         <input
           aria-label="search"
-          className="MuiInputBase-input makeStyles-inputInput-771"
+          className="MuiInputBase-input makeStyles-inputInput-782"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1303,10 +1428,10 @@ Array [
     }
   >
     <div
-      className="makeStyles-search-735"
+      className="makeStyles-search-746"
     >
       <div
-        className="makeStyles-searchIcon-736"
+        className="makeStyles-searchIcon-747"
       >
         <svg
           aria-hidden="true"
@@ -1321,12 +1446,12 @@ Array [
         </svg>
       </div>
       <div
-        className="MuiInputBase-root makeStyles-inputRoot-737"
+        className="MuiInputBase-root makeStyles-inputRoot-748"
         onClick={[Function]}
       >
         <input
           aria-label="search"
-          className="MuiInputBase-input makeStyles-inputInput-738"
+          className="MuiInputBase-input makeStyles-inputInput-749"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1375,7 +1500,7 @@ Array [
     }
   >
     <div
-      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-814 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-825 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
       role="progressbar"
       style={
         Object {
@@ -1437,7 +1562,7 @@ Array [
     }
   >
     <div
-      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-801 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      className="MuiCircularProgress-root WithStyles(ForwardRef(CircularProgress))-root-812 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
       role="progressbar"
       style={
         Object {
@@ -1499,7 +1624,7 @@ Array [
     }
   >
     <div
-      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-827 MuiChip-outlined MuiChip-clickable"
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-838 MuiChip-outlined MuiChip-clickable"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -1559,7 +1684,7 @@ Array [
     }
   >
     <div
-      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-861 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiButtonBase-root MuiChip-root WithStyles(ForwardRef(Chip))-root-872 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -1619,7 +1744,7 @@ Array [
     }
   >
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-895 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1638,7 +1763,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-895 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1657,7 +1782,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-895 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1676,7 +1801,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-895 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-906 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys"
       onKeyUp={[Function]}
       role="button"
@@ -1732,7 +1857,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-926"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-937"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1796,7 +1921,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1106"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1117"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
@@ -1860,7 +1985,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1046 MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-1057 MuiFormControl-fullWidth"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1924,7 +2049,7 @@ Array [
     }
   >
     <div
-      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-986"
+      className="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-997"
     >
       <label
         className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
@@ -1994,7 +2119,7 @@ Array [
     }
   >
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1166 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/One+for+the+Road"
       onKeyUp={[Function]}
       role="button"
@@ -2013,7 +2138,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1166 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/_/R+U+Mine%3F"
       onKeyUp={[Function]}
       role="button"
@@ -2032,7 +2157,7 @@ Array [
       </span>
     </a>
     <a
-      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1166 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
+      className="MuiChip-root WithStyles(ForwardRef(Chip))-root-1177 MuiChip-outlined MuiChip-sizeSmall MuiChip-clickable"
       href="https://www.last.fm/pt/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F"
       onKeyUp={[Function]}
       role="button"
