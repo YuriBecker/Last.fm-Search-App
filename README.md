@@ -2,7 +2,18 @@
 
 # Last.fm Search App
 
-### An app to search for information about artists and albums using the Last.fm public api.
+### An app to search for information about artists and albums using the Last.fm public api
+
+## Functionalities
+
+- Login, Sign Up and Logout using [Firebase Authentication](https://firebase.google.com/docs/auth)
+- Private routes
+- Albums search
+- Artists search
+- Separate artist and album search history
+- History saved in local storage with [Redux Persist](https://github.com/rt2zz/redux-persist)
+- Each user has your own history
+- Only searches that did not result in an error are added to the history
 
 ### See online
 
